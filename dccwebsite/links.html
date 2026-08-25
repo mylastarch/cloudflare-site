@@ -24,455 +24,517 @@
 		<a href="index.html">DCCWEBSITE Home</a>
 	</nav>
 	<main id="main-content">
-
-<table border="0" width=100% cellpadding="0" cellspacing="0">
-	<tr>
-		<td align=left valign=top width=25%>
-			<b>SUPPORT OUR TROOPS<br>
-			FUTURE</b>
-		</td>
-
-		<TD VALIGN=top ALIGN=CENTER width=50%>
-			<h2 class="my3rdNewStyle">DCC ON THE WEB</h2>
-			<strong><time id="current-date"></time></strong>
-			<script>
-			const currentDate = new Date();
-			const dateElement = document.getElementById('current-date');
-			dateElement.dateTime = currentDate.toISOString().slice(0, 10);
-			dateElement.textContent = new Intl.DateTimeFormat('en-US', {
-				weekday: 'short',
-				month: 'short',
-				day: 'numeric',
-				year: 'numeric'
-			}).format(currentDate);
-			</script><br>
-			
-			<BR><BR>
-		</td>
-
-		<td align=right VALIGN=top width=25%>
+	<header class="directory-header">
+		<div class="directory-intro">
+			<p class="directory-eyebrow">Support Our Troops · Future</p>
+			<h1>DCC ON THE WEB</h1>
+			<p><time id="current-date"></time></p>
+			<p class="directory-motto">All You Need Is Love… Give Peace a Chance!</p>
+		</div>
+		<div class="email-tools">
 			<form id="email-provider-form">
-			<label for="email-provider">Check email:</label>
-			<select id="email-provider" required>
-			<option value="" selected>Select one ...</option>
-			<option value="" disabled>──────────</option>
-			<option value="https://www.spectrum.net/">Spectrum</option>
-			<option value="https://mail.aol.com/">AOL Mail</option>
-			<option value="https://login.xfinity.com/login">Xfinity</option>
-			<option value="https://mail.yahoo.com/">Cox Mail (Yahoo)</option>
-			<option value="https://webmail.earthlink.net/">EarthLink</option>
-			<option value="https://webmail.juno.com/cgi-bin/login.cgi?domain=juno.com">Juno</option>
-			<option value="https://www.icloud.com/mail">iCloud Mail</option>
-			<option value="https://outlook.live.com/mail/">Outlook / Hotmail</option>
-			<option value="https://mail.google.com/">Gmail</option>
-			<option value="https://currently.att.yahoo.com/">AT&amp;T Mail</option>
-			<option value="https://mail.yahoo.com/">Yahoo Mail</option>
-            <option value="https://account.proton.me/mail">Proton Mail</option>
-			<option value="https://tuta.com">Tuta Mail</option>
-            <option value="https://www.zoho.com/mail/">Zoho Mail</option>
-            <option value="https://www.gmx.com/mail/">GMX Mail</option>
-
-			</select>
-			<button type="submit">Open</button>
+				<label for="email-provider">Check email</label>
+				<div class="email-controls">
+					<select id="email-provider" required>
+						<option value="" selected>Select provider…</option>
+						<option value="https://www.spectrum.net/">Spectrum</option>
+						<option value="https://mail.aol.com/">AOL Mail</option>
+						<option value="https://login.xfinity.com/login">Xfinity</option>
+						<option value="https://mail.yahoo.com/">Cox Mail (Yahoo)</option>
+						<option value="https://webmail.earthlink.net/">EarthLink</option>
+						<option value="https://webmail.juno.com/cgi-bin/login.cgi?domain=juno.com">Juno</option>
+						<option value="https://www.icloud.com/mail">iCloud Mail</option>
+						<option value="https://outlook.live.com/mail/">Outlook / Hotmail</option>
+						<option value="https://mail.google.com/">Gmail</option>
+						<option value="https://currently.att.yahoo.com/">AT&amp;T Mail</option>
+						<option value="https://mail.yahoo.com/">Yahoo Mail</option>
+						<option value="https://account.proton.me/mail">Proton Mail</option>
+						<option value="https://tuta.com">Tuta Mail</option>
+						<option value="https://www.zoho.com/mail/">Zoho Mail</option>
+						<option value="https://www.gmx.com/mail/">GMX Mail</option>
+					</select>
+					<button type="submit">Open</button>
+				</div>
 			</form>
+		</div>
+	</header>
 
-			<b><FONT FACE="COURIER NEW, COURIER, MONO" SIZE="4" COLOR="BLACK">All You Need Is Love...<br>Give Peace A Chance!
-			</FONT>
-			</b>
-		</TD>
-	</TR>
-</table>
+	<section class="directory-tools" aria-label="Find a link">
+		<label for="link-search">Search this links page</label>
+		<input id="link-search" type="search" placeholder="Search links or categories…" autocomplete="off">
+		<nav class="category-jumps" aria-label="Jump to a category">
+			<a href="#search-tools">Search</a><a href="#dcc-personal">DCC</a><a href="#news">News</a><a href="#artificial-intelligence">A.I.</a><a href="#linux">Linux</a><a href="#useful-information">Useful Info</a><a href="#BEATLES">Beatles &amp; Music</a><a href="#entertainment">Entertainment</a><a href="#autism">Autism</a><a href="#security">Security</a><a href="#tech-support">Tech Support</a><a href="#sports">Sports</a><a href="#weather">Weather</a><a href="#general-resources">General</a><a href="#education-health">Education</a><a href="#kidney-health">Health</a><a href="#community_help">Community Help</a><a href="#FUTURE">Webcams</a>
+		</nav>
+		<div id="link-search-status" class="search-status" role="status" aria-live="polite"></div>
+		<ul id="link-search-results" class="search-results" hidden></ul>
+	</section>
 
+	<nav class="featured-links" aria-label="Featured links">
+		<a href="https://autismsociety.org/">Autism Society</a>
+		<a href="https://www.ripoffreport.com/search.asp">Ripoff Report</a>
+		<a href="https://www.familyecho.com/?p=START&amp;c=nyrm33dd90c1wvbn&amp;f=818269352236674006&amp;lang=en">Cihon Family Tree</a>
+		<a href="https://www.familyecho.com/?p=START&amp;c=otuibr2qpqa8zpdg&amp;f=434847341756191139&amp;lang=en">Williams Family Tree</a>
+		<a href="blog.html">Weblog</a>
+		<a href="https://form.jotform.com/242413215628148">Feedback</a>
+	</nav>
 
-<table class="body-1" BORDER=1 bordercolor=Black cellspacing=0 cellpadding=0 width=100% summary="This table is the SECOND table on this site">
-	<tr>
-		<td align=center width=25%><font size=-1><a href="https://www.autism-society.org/">AUTISM SOCIETY</a><br>
-			<a href=https://www.ripoffreport.com/search.asp>RIP-OFF REPORTS</a></FONT>
-		</td>
-		<td align=center width=50%>
-			<div class="featured-links">
-				<A HREF="https://www.familyecho.com/?p=START&c=nyrm33dd90c1wvbn&f=818269352236674006&lang=en">CIHON FAMILY TREE</A><BR>
-				<A HREF="https://www.familyecho.com/?p=START&c=otuibr2qpqa8zpdg&f=434847341756191139&lang=en">WILLIAMS FAMILY TREE</A><BR>
-				<A HREF="#autism">AUTISM LINKS</A> | <A HREF="#BEATLES">BEATLES LINKS</A> | <A HREF="blog.html">WEBLOG</A><br>
-				<A HREF="#community_help">COMMUNITY HELP</A>
+	<div class="directory-grid">
+		<div class="directory-column">
+			<section id="search-tools" class="directory-card directory-card-search">
+				<h2>WEB SEARCH</h2>
+				<div class="directory-groups">
+					<div class="directory-group">
+						<ul>
+							<li><a href="https://duckduckgo.com/">DuckDuckGo</a></li>
+							<li><a href="https://www.google.com/">Google Search</a></li>
+							<li><a href="https://search.yahoo.com/">Yahoo Search</a></li>
+							<li><a href="https://search.brave.com/">Brave Search</a></li>
+							<li><a href="https://www.startpage.com/">Startpage</a></li>
+							<li><a href="https://www.ecosia.org/">Ecosia</a></li>
+							<li><a href="https://www.google.com/webhp?complete=1&amp;hl=en">Google Suggest</a></li>
+							<li><a href="https://www.google.com/shopping">Google Shopping</a></li>
+							<li><a href="https://www.google.com/imghp?hl=en">Google Images</a></li>
+							<li><a href="https://news.google.com/">Google News</a></li>
+							<li><a href="https://support.google.com/">Google Help</a></li>
+							<li><a href="https://translate.google.com/">Google Translate</a></li>
+							<li><a href="https://www.searchbug.com/">SearchBug</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section id="artificial-intelligence" class="directory-card directory-card-ai">
+				<h2>ASK A.I.</h2>
+				<div class="directory-groups">
+					<div class="directory-group">
+						<ul>
+							<li><a href="https://duck.ai/chat">Duck.ai</a></li>
+							<li><a href="https://chatgpt.com">ChatGPT</a></li>
+							<li><a href="https://gemini.google.com/app">Google Gemini</a></li>
+							<li><a href="https://www.perplexity.ai">Perplexity</a></li>
+							<li><a href="https://grok.com">Grok</a></li>
+							<li><a href="https://www.kimi.com/en">Kimi</a></li>
+							<li><a href="https://www.meta.ai">Meta AI</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section id="news" class="directory-card directory-card-news">
+				<h2>NEWS SERVICES</h2>
+				<div class="directory-groups">
+					<div class="directory-group">
+						<ul>
+							<li><a href="https://abcnews.com/">ABC News</a></li>
+							<li><a href="https://www.nbcnews.com">NBC News</a></li>
+							<li><a href="https://www.riverfronttimes.com/">Riverfront Times</a></li>
+							<li><a href="https://www.pbs.org/newshour/">PBS NewsHour</a></li>
+							<li><a href="https://www.upi.com">UPI</a></li>
+							<li><a href="https://www.usatoday.com/">USA Today</a></li>
+							<li><a href="https://www.washingtonpost.com/">Washington Post</a></li>
+							<li><a href="https://www.cbsnews.com/">CBS News</a></li>
+							<li><a href="https://www.cnn.com/">CNN</a></li>
+							<li><a href="https://www.foxnews.com/">Fox News</a></li>
+							<li><a href="https://www.ms.now/">MS NOW</a></li>
+							<li><a href="https://www.npr.org/sections/news">NPR</a></li>
+							<li><a href="https://www.reuters.com/">Reuters</a></li>
+							<li><a href="https://www.nytimes.com">New York Times</a></li>
+							<li><a href="https://apnews.com">AP News</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section id="dcc-personal" class="directory-card directory-card-dcc">
+				<h2>DCC &amp; PERSONAL</h2>
+				<div class="directory-groups">
+					<div class="directory-group">
+						<h3>PERSONAL LINKS</h3>
+						<ul>
+							<li><a href="https://findthenite.com/">FindTheNite</a></li>
+							<li><a href="https://www.m2mediaco.com/">M2 Media</a></li>
+							<li><a href="https://lighttowerfilms.com">Light Tower Films</a></li>
+						</ul>
+					</div>
+					<div class="directory-group">
+						<h3>ABOUT THIS SITE</h3>
+						<ul>
+							<li><a href="aboutme.html">About Me</a></li>
+							<li><a href="https://form.jotform.com/242413215628148">Contact and Feedback</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section id="useful-information" class="directory-card directory-card-useful">
+				<h2>USEFUL INFORMATION</h2>
+				<div class="directory-groups">
+					<div class="directory-group">
+						<ul>
+							<li><a href="https://www.mapquest.com">Maps and Driving Directions</a></li>
+							<li><a href="https://www.lawrencegoetz.com/programs/ipinfo/">See Your IP Address</a></li>
+							<li><a href="https://www.speakeasy.net/speedtest/">Internet Speed Test</a></li>
+							<li><a href="https://tableizer.journalistopia.com">Spreadsheet to HTML</a></li>
+							<li><a href="https://www.switchboard.com">Switchboard Phone Book</a></li>
+							<li><a href="https://www.anywho.com/">AnyWho Phone Book</a></li>
+							<li><a href="https://www.flightview.com/">Real-Time Flight Tracking</a></li>
+							<li><a href="https://www.gasbuddy.com/gasprices/florida/bradenton">Bradenton Gas Prices</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section id="entertainment" class="directory-card directory-card-entertainment">
+				<h2>ENTERTAINMENT</h2>
+				<div class="directory-groups">
+					<div class="directory-group">
+						<h3>GAMES &amp; HUMOR</h3>
+						<ul>
+							<li><a href="https://www.y8.com/">Y8 Games</a></li>
+							<li><a href="https://www.facebook.com/gaming/play/?store_visit_source=left_rail_navigation">Facebook Games</a></li>
+							<li><a href="https://www.rd.com/list/political-jokes/">Political Humor</a></li>
+						</ul>
+					</div>
+					<div class="directory-group">
+						<h3>TV SHOWS</h3>
+						<ul>
+							<li><a href="https://charmed.fandom.com/wiki/Charmed_(TV_series)/">Charmed</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section id="linux" class="directory-card directory-card-linux">
+				<h2>LINUX</h2>
+				<div class="directory-groups">
+					<div class="directory-group">
+						<h3>ROLLING RELEASE</h3>
+						<ul>
+							<li><a href="https://archlinux.org">Arch Linux</a></li>
+							<li><a href="https://manjaro.org/">Manjaro Linux <small>(Arch based)</small></a></li>
+							<li><a href="https://www.arcolinux.info">ArcoLinux <small>(Arch based)</small></a></li>
+							<li><a href="https://get.opensuse.org/tumbleweed/">openSUSE Tumbleweed</a></li>
+							<li><a href="https://rhinolinux.org">Rhino Linux <small>(Ubuntu based)</small></a></li>
+							<li><a href="https://getsol.us">Solus Linux</a></li>
+							<li><a href="https://wiki.debian.org/DebianTesting">Debian Testing</a></li>
+							<li><a href="https://voidlinux.org">Void Linux</a></li>
+							<li><a href="https://clearlinux.github.io">Clear Linux</a></li>
+						</ul>
+					</div>
+					<div class="directory-group">
+						<h3>ADVANCED USERS</h3>
+						<ul>
+							<li><a href="https://www.gentoo.org">Gentoo Linux</a></li>
+							<li><a href="https://www.slackware.com/info/">Slackware Linux</a></li>
+							<li><a href="https://www.blackarch.org">BlackArch Linux</a></li>
+							<li><a href="https://www.kali.org">Kali Linux</a></li>
+							<li><a href="https://peppermintos.com">Peppermint Linux</a></li>
+							<li><a href="https://www.whonix.org">Whonix Linux</a></li>
+							<li><a href="https://tails.net">Tails Linux</a></li>
+							<li><a href="https://www.openmandriva.org">OpenMandriva Linux</a></li>
+						</ul>
+					</div>
+					<div class="directory-group">
+						<h3>BEGINNERS</h3>
+						<ul>
+							<li><a href="https://ubuntu.com/desktop">Ubuntu Linux</a></li>
+							<li><a href="https://solydxk.com">SolydXK Linux</a></li>
+							<li><a href="https://linuxmint.com">Linux Mint</a></li>
+							<li><a href="https://mxlinux.org">MX Linux</a></li>
+							<li><a href="https://zorin.com">Zorin Linux</a></li>
+							<li><a href="https://www.linuxliteos.com/index.html">Linux Lite</a></li>
+						</ul>
+					</div>
+					<div class="directory-group">
+						<h3>REFERENCES</h3>
+						<ul>
+							<li><a href="https://blog.udemy.com/why-use-linux/">Why Use Linux</a></li>
+							<li><a href="https://distrowatch.com">DistroWatch</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+		</div>
+		<div class="directory-column">
+			<section id="education-health" class="directory-card directory-card-education">
+				<h2>EDUCATION &amp; PUBLIC HEALTH</h2>
+				<div class="directory-groups">
+					<div class="directory-group">
+						<ul>
+							<li><a href="https://www.cdc.gov/">Centers for Disease Control and Prevention</a></li>
+							<li><a href="https://www.osu.edu/index.php">The Ohio State University</a></li>
+							<li><a href="https://wmich.edu">Western Michigan University</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section id="BEATLES" class="directory-card directory-card-music">
+				<h2>BEATLES &amp; MUSIC</h2>
+				<p class="directory-quote">“The Love You Take is Equal to the Love You Make”</p>
+				<div class="directory-groups">
+					<div class="directory-group">
+						<h3>BEATLES RESOURCES</h3>
+						<ul>
+							<li><a href="https://www.beatles-a-rama.com/">Beatles-A-Rama</a></li>
+							<li><a href="https://www.thefab40.com/calendar.html">Beatles Anniversary Calendar</a></li>
+							<li><a href="https://beatles.ncf.ca/timeline.html#65">Beatles Timeline: 1965</a></li>
+							<li><a href="https://www.thebeatles.com">The Beatles Official Site</a></li>
+							<li><a href="https://brunchradio.com/">Beatle Brunch</a></li>
+							<li><a href="https://brunchradio.com/radio-stations/">Beatle Brunch Stations</a></li>
+							<li><a href="https://www.beatlesagain.com/">The Internet Beatles Album</a></li>
+							<li><a href="https://www.liveabout.com/search?q=The+Beatles">LiveAbout Beatles Index</a></li>
+							<li><a href="https://www.iamthebeatles.com/">I Am the Beatles</a></li>
+							<li><a href="https://www.columbia.edu/~brennan/beatles/">Joseph Brennan's Beatles Website</a></li>
+							<li><a href="https://www.beatlesbible.com/albums/">Complete Discography</a></li>
+							<li><a href="https://bootlegbeatles.com/">The Bootleg Beatles</a></li>
+							<li><a href="https://time.com/tag/the-beatles/">Time Magazine: The Beatles</a></li>
+							<li><a href="https://www.beatles-unlimited.com/">Beatles Unlimited Magazine</a></li>
+							<li><a href="https://www.usefultrivia.com/music_trivia/beatles_trivia_index.html">Beatles Trivia Quiz</a></li>
+							<li><a href="https://gernhardt.com/beatles/index.shtml">Harald Gernhardt's Beatles Site</a></li>
+							<li><a href="https://www.rockhall.com/inductees/beatles">Rock &amp; Roll Hall of Fame</a></li>
+							<li><a href="https://beatles.ncf.ca/timeline.html">The Beatles Timeline</a></li>
+						</ul>
+					</div>
+					<div class="directory-group">
+						<h3>BAND MEMBERS</h3>
+						<ul>
+							<li><a href="https://www.johnlennon.com/">John Lennon <small>(1940–1980)</small></a></li>
+							<li><a href="https://www.paulmccartney.com">Paul McCartney</a></li>
+							<li><a href="https://www.beatlesagain.com/bgeorge.html">George Harrison <small>(1943–2001)</small></a></li>
+							<li><a href="https://www.ringostarr.com/">Ringo Starr</a></li>
+						</ul>
+					</div>
+					<div class="directory-group">
+						<h3>CLASSIC ROCK</h3>
+						<ul>
+							<li><a href="https://www.liveabout.com/tour-schedules-748338">Tour Schedules</a></li>
+							<li><a href="https://digitaldreamdoor.com/pages/best_albumsddd.html">Top 300 Albums</a></li>
+							<li><a href="https://www.musicgrotto.com/best-classic-rock-songs/">Top Classic Rock Songs</a></li>
+							<li><a href="https://ultimateclassicrock.com/category/news/">Classic Rock News</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section id="autism" class="directory-card directory-card-autism">
+				<h2>AUTISM</h2>
+				<p class="directory-banner">April is Autism Acceptance Month</p>
+				<div class="directory-groups">
+					<div class="directory-group">
+						<h3>CURRENT INFORMATION</h3>
+						<ul class="directory-facts">
+							<li>Autism spectrum disorder is a developmental disability caused by differences in the brain.</li>
+							<li>About 1 in 31 eight-year-old children in 16 monitored U.S. communities were identified with autism in 2022.</li>
+							<li>Autism was identified more than three times as often among boys as among girls in those communities.</li>
+							<li>Autism occurs across all racial, ethnic, and socioeconomic groups.</li>
+						</ul>
+						<p class="directory-source"><a href="https://www.cdc.gov/autism/data-research/index.html">Source: CDC Autism Data and Statistics</a></p>
+					</div>
+					<div class="directory-group">
+						<h3>RESOURCES</h3>
+						<ul>
+							<li><a href="https://autismpartnershipfoundation.org">Autism Partnership Foundation</a></li>
+							<li><a href="https://abasolutions.com">ABA Solutions</a></li>
+							<li><a href="https://www.autismspeaks.org/index2.php">Autism Speaks</a></li>
+							<li><a href="https://act.autismspeaks.org/site/TR/Walk/StLouis?fr_id=6694&amp;pg=entry">Autism Walk in St. Louis</a></li>
+							<li><a href="https://www.abainternational.org/">ABA International</a></li>
+							<li><a href="https://www.moaba.org/">MOABA</a></li>
+							<li><a href="https://www.autismtoday.com/">Autism Today</a></li>
+							<li><a href="https://www.healisautism.com/post/importance-of-public-awareness-for-autism">Public Autism Awareness</a></li>
+							<li><a href="https://www.canfoundation.org/">Cure Autism Now Foundation</a></li>
+							<li><a href="https://www.autism-pdd.net/">Autism-PDD Resources Network</a></li>
+							<li><a href="https://www.genevacentre.ca/">Geneva Centre for Autism</a></li>
+							<li><a href="https://www.futurehorizons-autism.com/">Future Horizons</a></li>
+							<li><a href="https://www.nimh.nih.gov/health/topics/autism-spectrum-disorders-asd">National Institute of Mental Health</a></li>
+							<li><a href="https://medlineplus.gov/autismspectrumdisorder.html">MedlinePlus Autism</a></li>
+							<li><a href="https://www.mo-feat.org/">Missouri Families for Effective Autism Treatment</a></li>
+							<li><a href="https://www.patientcenters.com/autism/">Patient-Centered Guides</a></li>
+							<li><a href="https://www.autism-india.org/">Action for Autism India</a></li>
+							<li><a href="https://www.autcom.org/">Autism National Committee</a></li>
+							<li><a href="https://www.autism.ca/">Autism Services of Canada</a></li>
+							<li><a href="https://www.healingwell.com">HealingWell</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section id="sex-offenders" class="directory-card directory-card-registries">
+				<h2>SEX OFFENDER REGISTRIES</h2>
+				<div class="directory-groups">
+					<div class="directory-group">
+						<ul>
+							<li><a href="https://www.parentsformeganslaw.org/sex-offender-search/">Nationwide Registry Search</a></li>
+							<li><a href="https://www.mshp.dps.missouri.gov/MSHPWeb/PatrolDivisions/CRID/SOR/SORPage.html">Missouri Registry</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+		</div>
+		<div class="directory-column">
+			<section id="security" class="directory-card directory-card-security">
+				<h2>SECURITY</h2>
+				<div class="directory-groups">
+					<div class="directory-group">
+						<ul>
+							<li><a href="https://www.eset.com/us/home/online-scanner/">ESET Online Scanner</a></li>
+							<li><a href="https://www.f-secure.com/us-en/online-scanner">F-Secure Online Scanner</a></li>
+							<li><a href="https://www.trendmicro.com/en_us/forHome/products/housecall.html">Trend Micro HouseCall</a></li>
+							<li><a href="https://www.safetydetectives.com/vulnerability-tool/">SafetyDetectives Vulnerability Tool</a></li>
+							<li><a href="https://support.norton.com/sp/static/external/tools/npe.html">Norton Power Eraser</a></li>
+							<li><a href="https://www.clamav.net">ClamAV for Linux</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section id="sports" class="directory-card directory-card-sports">
+				<h2>SPORTS</h2>
+				<div class="directory-groups">
+					<div class="directory-group">
+						<ul>
+							<li><a href="https://sports.yahoo.com/">Yahoo Sports</a></li>
+							<li><a href="https://sports.yahoo.com/mlb/scoreboard">MLB Scoreboard</a></li>
+							<li><a href="https://www.nfl.com/scores">NFL Scores</a></li>
+							<li><a href="https://www.espn.com/">ESPN</a></li>
+							<li><a href="https://www.Players-SB.com/cgi-bin/affiliate.pl?aid=19448&amp;sid=1" rel="sponsored">Players Sportsbook</a></li>
+							<li><a href="https://www.covers.com/oddsshark">Odds Shark by Covers</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section id="weather" class="directory-card directory-card-weather">
+				<h2>WEATHER</h2>
+				<div class="directory-groups">
+					<div class="directory-group">
+						<h3>LOCAL FORECASTS</h3>
+						<ul>
+							<li><a href="https://www.wunderground.com/weather/us/mo/saint-charles">St. Charles, Missouri</a></li>
+							<li><a href="https://www.wunderground.com/weather/us/mo/st.-peters">St. Peters, Missouri</a></li>
+							<li><a href="https://www.wunderground.com/weather/us/mi/kalamazoo">Kalamazoo, Michigan</a></li>
+							<li><a href="https://www.wunderground.com/weather/us/mn/maple-grove">Maple Grove, Minnesota</a></li>
+							<li><a href="https://www.wunderground.com/weather/us/ca/long-beach">Long Beach, California</a></li>
+							<li><a href="https://www.wunderground.com/weather/us/tn/memphis">Memphis, Tennessee</a></li>
+							<li><a href="https://www.wunderground.com/weather/us/fl/bradenton/34205">Bradenton, Florida</a></li>
+							<li><a href="https://www.wunderground.com/dashboard/pws/KFLBRADE457">My Weather Station</a></li>
+						</ul>
+					</div>
+					<div class="directory-group">
+						<h3>HURRICANES &amp; SEVERE WEATHER</h3>
+						<ul>
+							<li><a href="https://www.suncam.tv/weather.html">Florida Hurricanes</a></li>
+							<li><a href="https://www.nhc.noaa.gov/">National Hurricane Center</a></li>
+							<li><a href="https://severestudios.com/">SevereStudios Storm Chasers</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section id="tech-support" class="directory-card directory-card-tech">
+				<h2>TECH SUPPORT</h2>
+				<div class="directory-groups">
+					<div class="directory-group">
+						<h3>HARDWARE</h3>
+						<ul>
+							<li><a href="https://www.dell.com/support/home/en-us">Dell</a></li>
+							<li><a href="https://www.ibm.com/support/us/">IBM Support</a></li>
+							<li><a href="https://www.nvidia.com/en-us/drivers/">NVIDIA Drivers</a></li>
+							<li><a href="https://support.creative.com/">Creative Labs</a></li>
+						</ul>
+					</div>
+					<div class="directory-group">
+						<h3>SOFTWARE</h3>
+						<ul>
+							<li><a href="https://support.microsoft.com/">Microsoft Support</a></li>
+							<li><a href="https://www.autodesk.com/support">Autodesk Support</a></li>
+							<li><a href="https://www.nvidia.com/">NVIDIA</a></li>
+							<li><a href="https://us.norton.com/antivirus">Norton Antivirus</a></li>
+							<li><a href="https://www.file-extensions.org/">File Extensions Reference</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section id="general-resources" class="directory-card directory-card-general">
+				<h2>GENERAL RESOURCES</h2>
+				<div class="directory-groups">
+					<div class="directory-group">
+						<h3>INFORMATION &amp; TRAVEL</h3>
+						<ul>
+							<li><a href="https://www.infoplease.com">InfoPlease</a></li>
+							<li><a href="https://www.floridarambler.com/tampa-bay-getaways/">Things to Do in Florida</a></li>
+							<li><a href="https://www.zabasearch.com/">ZabaSearch</a></li>
+							<li><a href="https://store.randmcnally.com/">Rand McNally Travel Store</a></li>
+						</ul>
+					</div>
+					<div class="directory-group">
+						<h3>AUTOMOTIVE</h3>
+						<ul>
+							<li><a href="https://www.marksalem.com/">Mark Salem Automotive Advice</a></li>
+						</ul>
+					</div>
+					<div class="directory-group">
+						<h3>SOFTWARE DOWNLOADS</h3>
+						<ul>
+							<li><a href="https://www.majorgeeks.com/">MajorGeeks</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section id="kidney-health" class="directory-card directory-card-health">
+				<h2>KIDNEY HEALTH</h2>
+				<div class="directory-groups">
+					<div class="directory-group">
+						<ul>
+							<li><a href="https://rsnhope.org/">Renal Support Network</a></li>
+							<li><a href="https://www.freseniuskidneycare.com">Fresenius Kidney Care</a></li>
+							<li><a href="https://www.unfilteredkidneyconvos.com">Unfiltered Kidney Conversations</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section id="community_help" class="directory-card directory-card-community">
+				<h2>COMMUNITY HELP</h2>
+				<div class="directory-groups">
+					<div class="directory-group">
+						<ul>
+							<li><a href="https://swmicoalition.org/">Southwest Michigan Coalition</a></li>
+							<li><a href="https://findhelp.org/">FindHelp</a></li>
+							<li><a href="https://feedingamerica.org/">Food Bank Locator</a></li>
+							<li><a href="https://childcare.org/">Childcare Help</a></li>
+							<li><a href="https://211.org/">211</a></li>
+							<li><a href="https://careeronestop.org/">Job and Career Help</a></li>
+							<li><a href="https://benefits.org/">Government Benefits for Businesses</a></li>
+							<li><a href="https://benefitscheckup.org/">Benefits for Older Adults</a></li>
+							<li><a href="https://needymeds.org/">Prescription Discounts</a></li>
+							<li><a href="https://dollarfor.org/">Hospital Bill Help</a></li>
+							<li><a href="https://lawhelp.org/">Low-Cost or Free Legal Help</a></li>
+							<li><a href="https://disasterassistance.gov/">Disaster Relief</a></li>
+							<li><a href="https://988lifeline.org/">988 Mental Health Lifeline</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<section id="FUTURE" class="directory-card directory-card-webcams directory-card-wide">
+		<h2>WEBCAMS</h2>
+		<div class="directory-groups">
+			<div class="directory-group">
+				<ul>
+					<li><a href="https://www.earthcam.com/usa/florida/tampa/">Tampa, Florida</a></li>
+					<li><a href="https://www.southhavenmi.gov/parks_and_recreation/south_beach_cam.php">South Haven, Michigan Beach</a></li>
+					<li><a href="https://www.earthcam.com/usa/missouri/stlouis/?cam=arch_riverview">St. Louis Arch and River</a></li>
+					<li><a href="https://www.weatherbug.com/traffic-cam/saint-louis-mo-63110">St. Louis Traffic Cams</a></li>
+					<li><a href="https://www.skylinewebcams.com/en/webcam/united-states/missouri/saint-louis/stadium.html">Busch Stadium</a></li>
+					<li><a href="https://www.earthcam.com/usa/florida/annamariaisland/?cam=annamariaisland">Bradenton Beach</a></li>
+					<li><a href="https://www.suncam.tv/">SunCam.TV Florida</a></li>
+					<li><a href="https://www.earthcam.com/world/england/london/abbeyroad/?cam=abbeyroad_uk">Abbey Road</a></li>
+					<li><a href="https://www.viewgallia.com/">Gallipolis, Ohio</a></li>
+					<li><a href="https://myearthcam.com/seaair">Bermuda</a></li>
+					<li><a href="https://www.iplivecams.com/live-cams/the-westin-grand-cayman-seven-mile-beach-resort-east-view-cayman-islands/">Grand Cayman</a></li>
+					<li><a href="https://www.iplivecams.com/live-cams/condo-hotels-playa-del-carmen-quintana-roo-mexico/">Playa del Carmen</a></li>
+					<li><a href="https://www.iplivecams.com/live-cams/belleville-square-illinois-united-states/">Belleville Square, Illinois</a></li>
+					<li><a href="https://southernmostpointwebcam.com/?utm_source=Fla-Keys.com&amp;utm_medium=WebcamLink&amp;utm_campaign=StreamingLink&amp;utm_cam=southernmost-point">Key West Southernmost Point</a></li>
+					<li><a href="https://www.iplivecams.com/live-cams/bw-best-western-plus-fort-myers-beach-florida-united-states/">Fort Myers Beach</a></li>
+					<li><a href="https://www.iplivecams.com/live-cams/beach-bistro-gulf-drive-holmes-beach-florida-united-states/">Holmes Beach</a></li>
+					<li><a href="https://www.iplivecams.com/florida-webcams/">Florida Webcams</a></li>
+					<li><a href="https://www.webcamtaxi.com/en/honduras/roatan/west-bay-beach-lasrocasresort.html">Las Rocas Resort, Honduras</a></li>
+				</ul>
 			</div>
-		</td>
-		<td align=center width=25%>
-			<font size=-1><a href="https://www.lawrencegoetz.com/programs/ipinfo/">SEE YOUR IP ADDRESS</A><br>
-			<a href="https://form.jotform.com/242413215628148">FEEDBACK </a><br><a href="https://www.speakeasy.net/speedtest/">Speakeasy Speed Test</a></font>
-		</td>
-	</tr>
-</table>
-
-<table class="body-2" BORDER=1 bordercolor=Black cellspacing=0 cellpadding=0 width=100% bgcolor=#88DD00 summary="This table is the SECOND table on this site">
-
-	<TR>
-		<td align=center width=100%>
-		</td>
-	</tr>
-</table>
-	<table class="body-1" BORDER=1 bordercolor=Black cellspacing=0 cellpadding=0 width=100% summary="This table is the SECOND table on this site">
-	<tr>
-		<td valign=top width=25%>
-			<a href="https://www.google.com/webhp?complete=1&hl=en">Google Suggest</a>&nbsp;&nbsp;&nbsp;&nbsp;<font size=-1><a href=https://froogle.google.com/froogle>Froogle</a>
-			<br>
-			<a href=https://www.google.com/imghp?hl=en>Images</a>-<a href=https://news.google.com/>News</a>-<a href=https://www.google.com/help/>Tips</a>-<a href="https://translate.google.com/translate_t">Translate</a>
-			<br>
-			</font>
-			<HR SIZE=1 COLOR=black>
-			<b><a target=_top href="https://www.searchbug.com/"><Center>Search the Web<br> with SearchBug</center></a></b>
-			<HR SIZE=1 COLOR=black>
-			&nbsp;<b>Ask A.I.:</b><br>
-			<font size=-1>
-			&#149; <a href="https://duck.ai/chat">DUCKDUCKGO A.I.</a><br>
-			&#149; <a href="https://chatgpt.com">CHATGPT A.I.</a><br>
-			&#149; <a href="https://gemini.google.com/app">GOOGLE GEMINI A.I.</a><br>
-			&#149; <a href="https://www.perplexity.ai">PERPLEXITY A.I.</a><br>
-			&#149; <a href="https://grok.com">GROK A.I.</a><br>
-			&#149; <a href="https://www.kimi.com/en">KIMI A.I.</a><br>
-			&#149; <a href="https://www.meta.ai">META A.I.</a>
-			</FONT>
-			<HR SIZE=1 COLOR=black>
-			&nbsp;<b>News Services:</b><font size=-1><br><a target=_top href=https://abcnews.go.com/>ABC</a>
-			-<a target=_top href=https://www.nbcnews.com>NBC</a>
-			-<a target=_top href=https://www.riverfronttimes.com/>RFT</a>
-			-<a target=_top href=https://www.pbs.org/newshour/newshour_index.html>PBS</a>
-			-<a target=_top href=https://www.upi.com>UPI</a>
-			<br><a target=_top href=https://www.usatoday.com/>USATODAY</a>
-			-<a target=_top href=https://www.washingtonpost.com/>WPOST</a>
-			-<a target=_top href=https://www.cbsnews.com/>CBS</a>
-			<BR><a target=_top href=https://www.cnn.com/>CNN</a>
-			-<a target=_top href=https://www.foxnews.com/>FOX</a>
-			-<a target=_top href=https://www.ms.now/>MS NOW</a>
-			<BR><a target=_top href=https://news.npr.org/>NPR</a>
-			-<a target=_top href=https://www.reuters.com/>REUTERS</a>-<a target=_top href="https://WWW.NYTIMES.COM">NY TIMES</a>
-			-<a href=https://apnews.com>APNEWS</a>
-			</font>
-			<HR SIZE=1 COLOR=black>
-			&nbsp;<b>Personal Links:</b><br>
-			<font size=-1>
-			&#149; <a href="https://findthenite.com/">FINDTHENITE SITE</a><br>
-			&#149; <a href="https://www.m2mediaco.com/">M2 Media</a><br>
-			&#149; <a href="https://lighttowerfilms.com">LIGHT TOWER FILMS</a>
-			</FONT>
-			<HR SIZE=1 COLOR=black>
-			&nbsp;<b>Site Information:</b><br>
-			<font size=-1>
-			&#149; <a href="aboutme.html">About Me</a><br>
-			&#149; <a href=https://form.jotform.com/242413215628148>Contact Us</a>
-			</FONT>
-			<HR SIZE=1 COLOR=black>
-			&nbsp;<b>Useful Information:</b><br>
-			<font size=-1>
-			&#149; <a href="https://WWW.MAPQUEST.COM">MAPS/DRIVING DIRECTIONS</a></font>
-			<br><br>
-			<HR SIZE=1 COLOR=black>
-			&nbsp;<b>Fun Stuff:</b><font size=-1><br>
-			<a href=https://chatgpt.com>CHAT GPT</a><br>
-			<a target=_top href="https://www.y8.com/">YAHOO GAMES </a><br>
-			<a href=https://www.facebook.com/gaming/play/?store_visit_source=left_rail_navigation>FACEBOOK GAMES</a><br>
-			</font>
-			<HR SIZE=1 COLOR=black>
-			&nbsp;<b>Humor:</b><font size=-1><br>
-			<a target=_top href="https://www.rd.com/list/political-jokes/">POLITICAL HUMOR</a><BR>
-			</font>
-			<HR SIZE=1 COLOR=black>
-			&nbsp;<b>Cool Tools:</b><font size=-1><br>
-			<a target=_top href="https://tableizer.journalistopia.com">SPREADSHEET TO HTML</a><BR>
-			</font>
-			<HR SIZE=2 COLOR=black>
-			<table width=100%>
-				<TD BGCOLOR=#00AAFF WIDTH=25% align=center><font size=4 color=000000>
-					<b>LINUX</b></FONT><br>
-				</td>
-			</TABLE>
-			<font size=3><a target=_top href="https://blog.udemy.com/why-use-linux/">Why Use Linux</a></font><BR>
-			<HR SIZE=2 COLOR=black>
-			&nbsp;<b>Linux Rolling Release Distros:</b><font size=3><br>
-			<a target=_top href="https://archlinux.org">ARCH LINUX</a><BR>
-			<a target=_top href="https://manjaro.org/">MANJARO LINUX (ARCH based)</a><BR>
-			<a target=_top href="https://www.arcolinux.info">ARCO LINUX (ARCH based)</a><BR>
-			<a target=_top href="https://get.opensuse.org/tumbleweed/">open SUSE Tumbleweed</a><BR>
-			<a target=_top href="https://rhinolinux.org">RHINO LINUX (Ubuntu based)</a><BR>
-			<a target=_top href="https://getsol.us">SOLUS LINUX</a><BR>
-			<a target=_top href="https://wiki.debian.org/DebianTesting">DEBIAN TESTING</a><BR>
-			<a target=_top href="https://voidlinux.org">VOID LINUX</a><BR>
-			<a target=_top href="https://clearlinux.github.io">CLEAR LINUX</a><BR>
-			</font>
-			<HR SIZE=2 COLOR=black>
-			&nbsp;<b>Distros for Advanced Users:</b><font size=3><br>
-			<a target=_top href="https://www.gentoo.org">GENTOO LINUX</a><BR>
-			<a target=_top href="https://www.slackware.com/info/">SLACKWARE LINUX</a><BR>
-			<a target=_top href="https://www.blackarch.org">BLACKARCH LINUX</a><BR>
-			<a target=_top href="https://www.kali.org">KALI LINUX</a><BR>
-			<a target=_top href="https://peppermintos.com">PEPPERMINT LINUX</a><BR>
-			<a target=_top href="https://www.whonix.org">WHONIX LINUX</a><BR>
-			<a target=_top href="https://tails.net">TAILS LINUX</a><BR>
-			<a target=_top href="https://www.openmandriva.org">OPEN MANDRIVA LINUX</a><BR>
-			</font>
-			<HR SIZE=2 COLOR=black>
-			&nbsp;<b>Distros for Beginners:</b><font size=3><br>
-			<a target=_top href="https://ubuntu.com/desktop">UBUNTU LINUX</a><BR>
-			<a target=_top href="https://solydxk.com">SOLYDXK LINUX</a><BR>
-			<a target=_top href="https://linuxmint.com">LINUX MINT</a><BR>
-			<a target=_top href="https://mxlinux.org">MX LINUX</a><BR>
-			<a target=_top href="https://zorin.com">ZORIN LINUX</a><BR>
-			<a target=_top href="https://www.linuxliteos.com/index.html">LINUX LITE</a><BR>
-			</font>
-			<HR SIZE=2 COLOR=black>
-			&nbsp;<b>Misc Linux References:</b><font size=3><br>
-			<a target=_top href="https://distrowatch.com">DISTROWATCH</a><BR>
-			</font>
-			<HR SIZE=2 COLOR=black>
-
-		</td>
-		
-		<td align=center width=50%>
-		<CENTER><B><a TARGET=_TOP HREF="https://www.cdc.gov/">CENTERS FOR DISEASE CONTROL & PREVENTION</a></B></CENTER>
-				<HR SIZE=1 COLOR=black>
-				<CENTER><B><font face="Arial" size="+2" color="GREEN"><a TARGET=_TOP HREF=https://www.osu.edu/index.php>THE OHIO STATE UNIVERSITY</a></font></B></CENTER>
-			<HR SIZE=1 COLOR=black>
-				<CENTER><B><font face="Arial" size="+2" color="BROWN"><a TARGET=_TOP HREF=https://wmich.edu>WESTERN MICHIGAN UNIVERSITY</a></font></B></CENTER>
-			<HR SIZE=1 COLOR=black>
-			<h2 id="BEATLES">THE BEATLES</h2>
-			<BLOCKQUOTE>"The Love You Take is Equal to the Love You Make"</BLOCKQUOTE>
-			<a target=_top href="https://www.beatles-a-rama.com/"><strong>BEATLES-A-RAMA</strong></a><BR>
-			<a target=_top href="https://www.thefab40.com/calendar.html"><strong>BEATLES ANNIVERSARY CALENDAR</strong></a><BR>
-			<a target=_top href="https://beatles.ncf.ca/timeline.html#65">THE BEATLES TIMELINE</a><br>
-			<a target=_top href="https://www.thebeatles.com">THE BEATLES DOT COM</a><br>
-			<a target=_top href="https://brunchradio.com/"><strong>BEATLE BRUNCH</strong></a><BR>
-			<a target=_top href="https://brunchradio.com/radio-stations/">BEATLE BRUNCH STATIONS</a><br>
-			<a target=_top href="https://www.beatlesagain.com/">The Internet Beatles Album</a><br>
-			<a target=_top href="https://www.liveabout.com/search?q=The+Beatles">ABOUT.COM'S Beatles Index of Links</a><br>
-			<a target=_top href="https://www.iamthebeatles.com/">I Am the Beatles</a><br>
-			<a target=_top href="https://www.columbia.edu/~brennan/beatles/">Joseph Brennan's Beatles Website</a><br>
-			<a target=_top href="https://www.beatlesbible.com/albums/">The Beatles Complete Discography</a><br>
-			<a target=_top href="https://bootlegbeatles.com/">The Bootleg Beatles (The Band)</a><br>
-			<a target=_top href="https://time.com/search/?q=The+Beatles">Time Magazine - The Beatles</a><br>
-			<a target=_top href="https://www.beatles-unlimited.com/">BEATLES UNLIMITED MAGAZINE</a><br>
-			<a target=_top href="https://www.usefultrivia.com/music_trivia/beatles_trivia_index.html">Beatles Trivia Quiz</a><br>
-			<a target=_top href="https://gernhardt.com/beatles/index.shtml">Harald Gernhardt's Beatles Site - since 1994</a><br>
-			<a target=_top href="https://www.rockhall.com/inductees/beatles">Rock n Roll Hall of Fame Article</a><br>
-			<a target=_top href="https://beatles.ncf.ca/timeline.html">The Beatles Timeline</a><br>
-			<ul class="legacy-link-list">
-				<li><a href="https://www.johnlennon.com/">JOHN 1940-1980</a></li>
-				<li><a href="https://www.paulmccartney.com">PAUL</a></li>
-				<li><a href="https://www.beatlesagain.com/bgeorge.html">GEORGE 1943-2001</a></li>
-				<li><a href="https://www.ringostarr.com/">RINGO</a></li>
-			</ul>
-			<p class="section-label"><strong>CLASSIC ROCK INFO</strong></p>
-			<ul class="legacy-link-list">
-				<li><a href="https://www.liveabout.com/tour-schedules-748338" class="sa"><strong>Tour Schedules</strong></a></li>
-				<li><a href="https://digitaldreamdoor.com/pages/best_albumsddd.html" class="sa"><strong>Top 300 Albums</strong></a></li>
-				<li><a href="https://www.musicgrotto.com/best-classic-rock-songs/" class="sa"><strong>Top Picks in Classic Rock</strong></a></li>
-				<li><a href="https://ultimateclassicrock.com/category/news/" class="sa"><strong>Classic Rock News</strong></a></li>
-			</ul>
-			<HR SIZE=1 COLOR=black>
-			<p><strong><span style="background-color: #ffcc00">APRIL IS AUTISM ACCEPTANCE MONTH</span></strong></p>
-
-			<h2 id="autism">AUTISM</h2>
-			<p><strong>Current information:</strong></p>
-			<ul class="autism-facts">
-				<li>Autism spectrum disorder is a developmental disability caused by differences in the brain.</li>
-				<li>About 1 in 31 eight-year-old children in 16 monitored U.S. communities were identified with autism in 2022.</li>
-				<li>Autism was identified more than three times as often among boys as among girls in those communities.</li>
-				<li>Autism occurs across all racial, ethnic, and socioeconomic groups.</li>
-			</ul>
-			<p><a href="https://www.cdc.gov/autism/data-research/index.html">Source: CDC Autism Data and Statistics</a></p>
-			<CENTER><B><a target=_top href="https://autismpartnershipfoundation.org">AUTISM PARTNERSHIP FOUNDATION of California</a></B></center>
-			<CENTER><B><a target=_top href="https://abasolutions.com">ABA SOLUTIONS</a></B></center>
-			<CENTER><B><a target=_top href="https://www.autismspeaks.org/index2.php">AUTISM SPEAKS</a></B></center>
-			<CENTER><B><a target=_top href="https://act.autismspeaks.org/site/TR/Walk/StLouis?fr_id=6694&pg=entry">AUTISM WALK IN ST.LOUIS</a></B></center>
-
-			<CENTER><B><a target=_top href=https://www.abainternational.org/><FONT FACE="COURIER NEW, COURIER, MONO" SIZE="4" COLOR="RED">ABA INTERNATIONAL</FONT></a></B></center>
-			<CENTER><B><a target=_top href="https://www.moaba.org/"><FONT FACE="COURIER NEW, COURIER, MONO" SIZE="5" COLOR="RED">MOABA</FONT></a></B></center>
-			<CENTER><B><a target=_top href=https://www.autismtoday.com/>Autism Today</a></B></center>
-			<CENTER><B><a target=_top href="https://www.healisautism.com/post/importance-of-public-awareness-for-autism">PUBLIC AUTISM AWARENESS</a></B></center>
-			<center><b><a target=_top href="https://www.canfoundation.org/">Cure Autism Now Foundation</a></b></center>
-			<center><b><a target=_top href="https://www.autism-pdd.net/">Autism-PDD Resources Network.</a></b></center>
-			<center><b><a target=_top href="https://www.autism.net/">Geneva Centre for Autism</a></b></center>
-			<center><b><a target=_top href="https://www.futurehorizons-autism.com/">Future Horizons - Autism</a></b></center>
-			<center><b><a target=_top href="https://www.nimh.nih.gov/publicat/autism.cfm">National Institute of Mental Health (NIMH)</a></b></center>
-			<center><b><a target=_top href="https://www.nlm.nih.gov/medlineplus/autism.html">MEDLINEplus - Autism</a></b></center>
-			<center><b><a target=_top href="https://www.mo-feat.org/">Missouri - Families for Effective Autism Treatment</a></b></center>
-			<center><b><a target=_top href="https://www.patientcenters.com/autism/">Patient-Centered Guides Web Site</a></b></center>
-			<center><b><a target=_top href="https://www.autism-india.org/">Action for Autism (AFA) - India</a></b></center>
-			<center><b><a target=_top href="https://www.autcom.org/">Autism National Committee</a></b></center>
-			<center><b><a target=_top href="https://www.autism.ca/">Autism treatment services of Canada</a></b></center>
-			<center><b><a target=_top href="https://www.healingwell.com">HealingWell.com</a></b></center>
-			<BR>
-			<HR SIZE=1 COLOR=black>
-			<table width=100%>
-				<TR>
-					<TD id="sex-offenders" BGCOLOR=#FF0000 WIDTH=50% align=center><font size=4 color=000000>
-						<b>SEX OFFENDERS LIST</b></font>
-					</td>
-				</TR>
-			</TABLE>
-			<center><b><a target=_top href="https://www.parentsformeganslaw.org/sex-offender-search/">LINKS TO SEX OFFENDER REGISTRIES NATIONWIDE</a></b></center>
-            <center><b><a target=_top href="https://www.mshp.dps.missouri.gov/MSHPWeb/PatrolDivisions/CRID/SOR/SORPage.html">MISSOURI SEX OFFENDER REGISTRY</a></b></center>
-
-		</td>
-
-		<td valign=top align=center width=25%>
-				<table width=100%>
-					<tr>
-						<TD BGCOLOR=#11BB00 WIDTH=25% align=center><font size=3 color=000000>
-							ANTI-VIRUS INFO</font>
-						</TD>
-					</TR>
-				</TABLE>
-
-
-			<center><b><a target=_top href="https://www.trendmicro.com/en_us/forHome/products/housecall.html">ONLINE SCAN</a></b></center>
-			<center><b><a target=_top href="https://www.eset.com/us/home/online-scanner/">ESET ONLINE SCAN</a></b></center>
-			<center><b><a target=_top href="https://www.f-secure.com/us-en/home/free-tools/online-scanner">SECURE ONLINE SCAN</a></b></center>
-			<center><b><a target=_top href="https://www.safetydetectives.com/vulnerability-tool/">SCAN</a></b></center>
-			<center><b><a target=_top href="https://support.norton.com/sp/static/external/tools/npe.html">NORTON POWER ERASER</a></b></center>
-			<center><b><a href=https://www.clamav.net>CLAMAV FOR LINUX</a></b></center>
-			<HR SIZE=1 COLOR=black>
-			<table width=100%>
-				<TD BGCOLOR=#00AAFF WIDTH=25% align=center><font size=3 color=000000>
-					<b>TV SHOWS</b></FONT>
-				</td>
-			</TABLE>
-
-			<a href=https://charmed.fandom.com/wiki/Charmed_(TV_series)/>CHARMED ONES.COM</a><br>
-			<HR SIZE=1 COLOR=black>
-			&nbsp;<b>Sports Information:</b><font size=-1><br>
-				<a target=_top href=https://sports.yahoo.com/>Yahoo Sports</a><BR>
-				<a target=_top href=https://sports.yahoo.com/mlb/scoreboard>MLB SCOREBOARD</a>-
-				<a target=_top href=https://www.nfl.com/scores>NFL SCORES</a><br>
-				<a target=_top href=https://espn.go.com/>ESPN</a><BR>
-				<a target=_top href="https://www.Players-SB.com/cgi-bin/affiliate.pl?aid=19448&amp;sid=1">
-				<img src="https://www.Players-SB.com/banners/aff-psb-125.gif" alt="Players Sportsbook" loading="lazy" decoding="async" border=0></a><BR>
-				<a target=_top href=https://www.oddsshark.com>ODDS SHARK</a><BR>
-			<HR SIZE=1 COLOR=black>
-			&nbsp;<b>Weather Information:</b><font size=-1><br>
-				<a target=_top href=https://www.suncam.tv/weather.html>ABOUT FLORIDA HURRICANES</a><br>
-				<a target=_top href=https://www.wunderground.com/weather/us/mo/saint-charles>ST. CHARLES MO FORECAST</a><BR>
-				<a target=_top href=https://www.wunderground.com/weather/us/mo/st.-peters>ST. PETERS MO FORECAST</a><BR>
-				<a target=_top href=https://www.wunderground.com/weather/us/mi/kalamazoo>KALAMAZOO MI FORECAST</a><BR>
-				<a target=_top href=https://www.wunderground.com/weather/us/mn/maple-grove>MAPLE GROVE MN FORECAST</a><BR>
-				<a target=_top href=https://www.wunderground.com/weather/us/ca/long-beach>LONG BEACH CA FORECAST</a>
-				<BR>
-				<a target=_top href=https://www.wunderground.com/weather/us/tn/memphis>MEMPHIS TN FORECAST</a><br>
-				<a target=_top href=https://www.wunderground.com/weather/us/fl/bradenton/34205>BRADENTON FL FORECASR</a>
-				<BR>
-				<a target=_top href=https://www.wunderground.com/dashboard/pws/KFLBRADE457>MY WEATHER STATION</a><BR>
-				<a target=_top href=https://www.nhc.noaa.gov/>NATIONAL HURRICAN CENTER</a><br>
-				<a target=_top href=https://severestudios.com/>SEVERESTUDIOS STORM CHASERS</a><br>
-				</FONT>
-			<HR SIZE=1 COLOR=black>
-			&nbsp;<b>PC Hardware Help:</b><font size=-1><br><a target=_top href=https://www.dell.com/us/en/gen/default.htm>DELL</a>-<a target=_top href=https://www.ibm.com/support/us/>IBM</a>-<a target=_top href=https://www.nvidia.com/content/drivers/drivers.asp>NVIDIA</a>-<a target=_top href=https://us.creative.com/support/>CREATIVE LABS</a></FONT>
-			<HR SIZE=1 COLOR=black>
-			&nbsp;<b>PC Software Help:</b><font size=-1><br>
-			<a target=_top href=https://support.microsoft.com/>MICROSOFT SUPPORT</a>-
-			<a target=_top href=https://usa.autodesk.com/adsk/servlet/index?siteID=123112&id=1068444>AUTODESK</a>-
-			<a target=_top href=https://www.nvidia.com/>NVIDIA</a><BR>
-			<a target=_top href=https://us.norton.com/antivirus>NORTON ANTI-VIRUS</a><BR>
-			<a target=_top href=https://housecall.trendmicro.com/>ONLINE ANTI-VIRUS SCANNER</a><br>
-			<a target=_top href=https://www.file-extensions.org/>FILE EXTENSIONS</a>
-			<HR SIZE=1 COLOR=black>
-						<table width=100%>
-				<TD BGCOLOR=#FF1155 WIDTH=25% align=center><font size=3 color=000000>
-					<b>GENERAL INFO</b></FONT>
-				</td>
-			</TABLE>
-			&nbsp;<a target=_top href=https://www.infoplease.com>INFOPLEASE WEBSITE</a>
-			<BR>
-			&nbsp;<font size=-1><a target=_top href=https://www.floridarambler.com/category/tampa-bay-getaways/>THINGS TO DO IN FLORIDA</a></font><br>
-			&nbsp;<font size=-1><a target=_top href=https://www.zabasearch.com/>ZABA SEARCH</a></font><br>
-			&nbsp;<font size=-1><a target=_top href=https://www.switchboard.com>SwitchBoard.com - PhoneBook</a></font><br>
-			&nbsp;<font size=-1><a target=_top href=https://www.anywho.com/>AnyWho - PhoneBook</a></font><br>
-			&nbsp;<font size=-1><a target=_top href=https://www.flightview.com/>REALTIME FLIGHT TRACKING</a></font><br>
-			&nbsp;<A HREF="https://store.randmcnally.com/" TARGET="_top">Travel Store on RandMcNally.com</A></FONT><BR>
-			<HR SIZE=1 COLOR=black>
-			<table width=100%>
-				<TD BGCOLOR=#11BB00 WIDTH=25% align=center><font size=3 color=000000>
-					<b>AUTOMOTIVE</b><BR></FONT>
-				</td>
-			</TABLE>
-			<CENTER><font size=-1><a target=_top href=https://www.marksalem.com/>MARK SALEM AUTOMOTIVE ADVICE</a></font></CENTER>
-			&nbsp;<font size=-1><a target=_top href=https://www.gasbuddy.com/gasprices/florida/bradenton>BRADENTON FL GAS PRICES</a></font><br>
-			<HR SIZE=1 COLOR=black>
-				<table width=100%>
-					<TD BGCOLOR=#123456 WIDTH=25% align=center><font size=3 color=#FFFFFF>
-						<b>FAVORITE SHAREWARE</b><BR></FONT>
-					</td>
-				</TABLE>
-			<CENTER><font size=-1><a target=_top href=https://www.majorgeeks.com/>MAJOR GEEKS</a></font></CENTER>
-			<HR SIZE=1 COLOR=black>
-			<table width=100%>
-				<TD BGCOLOR=#789012 WIDTH=25% align=center><font size=3 color=#FFFFFF>
-					<b>KIDNEY DISEASE INFO (CKD)</b><BR></FONT>
-				</td>
-			</TABLE>
-			<CENTER><font size=3><a target=_top href=https://rsnhope.org/>RENAL SUPPORT NETWORK</a></font></CENTER>
-			<CENTER><font size=3><a target=_top href=https://www.freseniuskidneycare.com>FRESENIUS KIDNEY CARE</a></font></CENTER>
-			<CENTER><font size=3><a target=_top href=https://www.unfilteredkidneyconvos.com>UNFILTERED KIDNEY CONVERSATIONS</a></font></CENTER>
-				<HR SIZE=1 COLOR=black>
-				<table width=100%>
-					<TD id="community_help" BGCOLOR=#223456 WIDTH=25% align=center><font size=3 color=#FFFFFF>
-						<b>COMMUNITY HELP</b><BR></FONT>
-					</td>
-				</TABLE>
-			<CENTER><font size=3><a target=_top href=https://swmicoalition.org/>SOUTHWEST MICHIGAN COALITION</a></font></CENTER>
-			<CENTER><font size=3><a target=_top href=https://findhelp.org/>FIND HELP</a></font></CENTER>
-			<CENTER><font size=3><a target=_top href=https://feedingamerica.org/>FOOD BANK LOCATOR</a></font></CENTER>
-			<CENTER><font size=3><a target=_top href=https://childcare.org/>CHILDCARE HELP</a></font></CENTER>
-			<CENTER><font size=3><a target=_top href=https://211.org/>211</a></font></CENTER>
-			<CENTER><font size=3><a target=_top href=https://careeronestop.org/>JOB AND CAREER HELP</a></font></CENTER>
-			<CENTER><font size=2><a target=_top href=https://benefits.org/>GOVERNMENT BENEFITS FOR BUSINESSES</a></font></CENTER>
-			<CENTER><font size=3><a target=_top href=https://benefitscheckup.org/>NCOA BENEFITS FOR OLDER ADULTS</a></font></CENTER>
-			<CENTER><font size=3><a target=_top href=https://needymeds.org/>PRESCRIPTION DISCOUNTS</a></font></CENTER>
-			<CENTER><font size=3><a target=_top href=https://dollarfor.org/>HOSPITAL BILL HELP</a></font></CENTER>
-			<CENTER><font size=3><a target=_top href=https://lawhelp.org/>LOW COST OR FREE LEGAL HELP</a></font></CENTER>
-			<CENTER><font size=3><a target=_top href=https://disasterassistance.gov/>DISASTER RELIEF</a></font></CENTER>
-			<CENTER><font size=3><a target=_top href=https://988lifeline.org/>MENTAL HEALTH HOTLINE</a></font></CENTER>
-			<HR SIZE=1 COLOR=black>
-			<BR>
-		</td>
-	</tr>
-</table>
-
-<table class="body-2" BORDER=1 bordercolor=Black cellspacing=0 cellpadding=5 width=100%>
-	<TR>
-		<td id="FUTURE" width=25% align=left valign=top>
-				<table width=100%>
-					<tr>
-						<td bgcolor=#FFAA00 WIDTH=25% align=center><font size=3 color=000000>
-							<b>WEBCAMS</b></font>
-						</td>
-					</tr>
-				</table>
-
-			<a href=https://www.earthcam.com/usa/florida/tampa/>TAMPA FL</a><br>
-			<a href=https://www.southhavenmi.gov/parks_and_recreation/south_beach_cam.php>SOUTH HAVEN MICHIGAN BEACH</a><br>
-			<a href=https://www.earthcam.com/usa/missouri/stlouis/?cam=arch_riverview>ST. LOUIS MO</a><br>
-			<a href=https://www.weatherbug.com/traffic-cam/saint-louis-mo-63110>ST. LOUIS TRAFFIC CAMS</a><br>
-			<a href=https://livebeachcam.net/st-louis-cardinals-webcam/>NEW BUSCH STADIUM CAM</a><br>
-			<a href=https://www.earthcam.com/usa/florida/annamariaisland/?cam=annamariaisland>Bradenton Beach Cam</a><br>
-			<a href=https://www.suncam.tv/>Sun Cam.TV Mobile Florida Cam</a><br>
-			<a href=https://www.earthcam.com/world/england/london/abbeyroad/?cam=abbeyroad_uk>ABBEY ROAD WEB CAM</a><br>
-			<a href=https://www.viewgallia.com/>GALLIPOLIS OHIO</a><br>
-			<a href=https://myearthcam.com/seaair>BERMUDA CAM</a><br>
-			<a href=https://www.iplivecams.com/live-cams/the-westin-grand-cayman-seven-mile-beach-resort-east-view-cayman-islands/>CAYMAN ISLAND CAM</a><br>
-			<a href=https://www.iplivecams.com/live-cams/condo-hotels-playa-del-carmen-quintana-roo-mexico/>CARIBBEAN OCEAN LIVE CAM</a><br>
-			<a href=https://www.iplivecams.com/live-cams/belleville-square-illinois-united-states/>BELLEVILLE SQUARE ILL CAM</a><br>
-			<a href=https://southernmostpointwebcam.com/?utm_source=Fla-Keys.com&utm_medium=WebcamLink&utm_campaign=StreamingLink&utm_cam=southernmost-point>KEY WEST SOUTHERN MOST POINT</a><br>
-			<a href=https://www.iplivecams.com/live-cams/bw-best-western-plus-fort-myers-beach-florida-united-states/>FORT MYERS BEACH CAM</a><br>
-			<a href=https://www.iplivecams.com/live-cams/beach-bistro-gulf-drive-holmes-beach-florida-united-states/>HOLMES BEACH CAM</a><br>
-			<a href=https://www.iplivecams.com/florida-webcams/>FLORIDA WEB CAMS</a><br>
-			<a href=https://www.webcamtaxi.com/en/honduras/roatan/west-bay-beach-lasrocasresort.html>Las Rocas Resort-HONDURAS</a><br>
-
-		</TD>
-		<td width=50% align=left valign=top>
-		</TD>
-		<td width=25% align=left valign=top>
-		</TD>
-	</TR>
-</TABLE>		
+		</div>
+	</section>
 	</main>
 		
 
@@ -482,11 +544,57 @@
 </footer>
 
 <script>
+	const currentDate = new Date();
+	const dateElement = document.getElementById('current-date');
+	dateElement.dateTime = currentDate.toISOString().slice(0, 10);
+	dateElement.textContent = new Intl.DateTimeFormat('en-US', {
+		weekday: 'short',
+		month: 'short',
+		day: 'numeric',
+		year: 'numeric'
+	}).format(currentDate);
+
 	document.getElementById('copyright-year').textContent = new Date().getFullYear();
 	document.getElementById('email-provider-form').addEventListener('submit', function (event) {
 		event.preventDefault();
 		const destination = document.getElementById('email-provider').value;
 		if (destination) window.location.href = destination;
+	});
+
+	const linkSearch = document.getElementById('link-search');
+	const searchResults = document.getElementById('link-search-results');
+	const searchStatus = document.getElementById('link-search-status');
+	const searchableLinks = Array.from(document.querySelectorAll('#main-content a[href]')).filter(function (link) {
+		return !link.getAttribute('href').startsWith('#');
+	});
+
+	linkSearch.addEventListener('input', function () {
+		const query = linkSearch.value.trim().toLowerCase();
+		searchResults.replaceChildren();
+
+		if (!query) {
+			searchResults.hidden = true;
+			searchStatus.textContent = '';
+			return;
+		}
+
+		const matches = searchableLinks.filter(function (link) {
+			return link.textContent.trim().toLowerCase().includes(query) || link.href.toLowerCase().includes(query);
+		});
+
+		matches.slice(0, 30).forEach(function (link) {
+			const item = document.createElement('li');
+			const resultLink = document.createElement('a');
+			resultLink.href = link.href;
+			resultLink.textContent = link.textContent.trim() || link.hostname;
+			item.appendChild(resultLink);
+			searchResults.appendChild(item);
+		});
+
+		searchResults.hidden = matches.length === 0;
+		searchStatus.textContent = matches.length === 0
+			? 'No matching links found.'
+			: matches.length + ' matching link' + (matches.length === 1 ? '' : 's') + (matches.length > 30 ? '; showing the first 30.' : '.');
 	});
 </script>
 
