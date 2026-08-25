@@ -1,66 +1,199 @@
-//body {
-//    font-family: Arial, sans-serif;
-// /*    margin: 20px;
-//    text-align: center;
-// */
-//}
+:root {
+    color-scheme: light;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #172033;
+    background: #edf2f7;
+}
+
+* {
+    box-sizing: border-box;
+}
 
 #body-aboutme {
-    font-family: Arial, sans-serif;
-/*    margin: 20px;
-    text-align: center;
-*/
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(180deg, #f8fbfd 0%, #eaf2f7 100%);
+    line-height: 1.65;
 }
 
-
-header {
+#header-aboutme {
+    padding: clamp(32px, 7vw, 72px) 20px;
+    background: linear-gradient(135deg, #102a43, #0868b7);
+    color: #fff;
     text-align: center;
-    padding: 10px;
-    background-color: #f4f4f4;
 }
 
-header img {
+.about-nav {
+    width: min(100%, 960px);
+    margin: 0 auto 1.5rem;
+    text-align: left;
+}
+
+.about-nav a {
+    display: inline-block;
+    padding: 0.55rem 0.85rem;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 0.4rem;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.about-nav a:hover,
+.about-nav a:focus-visible {
+    color: #102a43;
+    background: #fff;
+}
+
+#header-aboutme img {
     width: 150px;
     height: 150px;
+    margin-bottom: 12px;
+    border: 4px solid rgba(255, 255, 255, 0.9);
     border-radius: 50%;
-    margin-bottom: 10px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
-section {
-    margin: 20px;
+#header-aboutme h1 {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(2.1rem, 5vw, 3.3rem);
+    line-height: 1.1;
+}
+
+#header-aboutme p {
+    margin: 10px 0 0;
+    color: #e6f2fb;
+    font-size: 1.1rem;
+}
+
+main {
+    width: min(100% - 32px, 960px);
+    margin: 0 auto;
+    padding: 36px 0 48px;
+}
+
+#bio,
+#work {
+    margin-bottom: 24px;
+    padding: clamp(22px, 4vw, 36px);
+    border: 1px solid #d8e2eb;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(29, 53, 72, 0.08);
+}
+
+h2 {
+    margin: 0 0 16px;
+    color: #102a43;
+    font-size: 1.65rem;
+}
+
+#bio img {
+    float: left !important;
+    width: 200px;
+    height: auto;
+    margin: 4px 22px 12px 0 !important;
+    border-radius: 10px;
+}
+
+#bio p {
+    margin: 0;
+}
+
+#bio::after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+#work {
+    text-align: center;
+}
+
+#work > p {
+    margin: -8px 0 20px;
+    color: #627d98;
 }
 
 .project {
-    width: 200px; /* Square dimensions */
-    height: 200px;
-    border: 1px solid #ccc;
-    margin: 10px;
-    display: inline-block; /* Aligns the containers side by side */
-    text-align: center;
-    line-height: 200px; /* Vertically centers the text */
+    display: inline-flex;
+    width: min(100%, 240px);
+    min-height: 130px;
+    margin: 8px;
+    align-items: stretch;
+    vertical-align: top;
 }
 
-h1, h2 {
-    color: #333;
-}
-/*
-img {
-    float: left;
-    margin: 5px;
+.project a {
+    display: flex;
+    width: 100%;
+    padding: 22px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #c9d7e3;
+    border-radius: 12px;
+    background: #f7fafc;
+    color: #075ea8;
+    font-weight: 700;
+    line-height: 1.35;
+    text-decoration: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-p {
-    text-align: justify;
-    font-size: 25px;
+.project a:hover {
+    border-color: #0868b7;
+    box-shadow: 0 8px 20px rgba(8, 104, 183, 0.14);
+    transform: translateY(-3px);
 }
-*/
-#bio, #work {
-    background-color: #e9e9e9;
-    padding: 15px;
+
+a:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 4px;
 }
 
 footer {
-    background-color: #f4f4f4;
+    padding: 20px 16px;
+    background: #102a43;
+    color: #fff;
     text-align: center;
-    padding: 10px;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #b9e2ff;
+}
+
+@media (max-width: 600px) {
+    main {
+        width: min(100% - 20px, 960px);
+        padding-top: 20px;
+    }
+
+    #bio,
+    #work {
+        padding: 22px;
+    }
+
+    #bio img {
+        float: none !important;
+        width: 100%;
+        max-width: 260px;
+        margin: 0 auto 20px !important;
+    }
+
+    .project {
+        width: 100%;
+        margin: 7px 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project a {
+        transition: none;
+    }
 }

@@ -1,4 +1,19 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="DCCWEBSITE blog posts about technology, online safety, Linux, photography, and personal projects.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DCCWEBSITE">
+<meta property="og:title" content="DCCWEBSITE Blog">
+<meta property="og:description" content="Read posts about technology, online safety, Linux, photography, and personal projects.">
+<meta property="og:url" content="https://www.dccwebsite.com/blog">
+<meta property="og:image" content="https://www.dccwebsite.com/images/DCC-Banner.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://www.dccwebsite.com/blog">
+<link rel="icon" type="image/png" href="images/logo.png">
+<title>DCCWEBSITE Blog</title>
 <style>
 
 * {
@@ -9,25 +24,35 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8; /* Light background for the entire page */
+    color: #172033;
+    background: #eef4f8;
+    line-height: 1.6;
 }
 
 header {
-    background-color: #6a1b9a; /* Vibrant purple header */
+    background: linear-gradient(135deg, #4a176b, #7b2fa3);
     color: #ffffff;
     text-align: center;
-    padding: 1em 0;
+    padding: 28px 16px;
 }
 
+header h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3rem);
+}
 
 header nav ul {
+    display: flex;
+    margin: 18px 0 0;
     list-style: none;
     padding: 0;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+    justify-content: center;
 }
 
 header nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0;
 }
 
 header nav ul li a {
@@ -36,106 +61,142 @@ header nav ul li a {
     font-weight: bold;
 }
 
-/* Create two columns/boxes that floats next to each other */
-nav1 {
-  float: right;
-  position: fixed;
-  top: 20;
-  right: 0;
-  width: 30%;
-  background: #ccc;
-  padding: 20px;
-}
-
-
-/* Style the list inside the menu */
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-
 main {
-    margin: 20px;
-    background-color: #ffffff; /* White background for the main content */
-    padding: 20px;
-    border-radius: 8px; /* Rounded corners for the main content area */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: min(100% - 32px, 1180px);
+    margin: 32px auto;
+}
+
+.blog-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 260px;
+    gap: 24px;
+    align-items: start;
+}
+
+.recent-posts {
+    position: sticky;
+    top: 20px;
+    grid-column: 2;
+    grid-row: 1 / span 20;
+    padding: 22px;
+    border: 1px solid #d5c3df;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(64, 28, 82, 0.1);
+}
+
+.recent-posts h2 {
+    margin-top: 0;
+    color: #4a176b;
+    font-size: 1.25rem;
+}
+
+.recent-posts ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.recent-posts li + li {
+    margin-top: 9px;
+}
+
+.recent-posts a {
+    color: #5d217b;
 }
 
 article {
-    float: left;
-    padding: 20px;
-    width: 70%;
-    background-color: #f1f1f1;
-
-    margin-bottom: 40px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #eeeeee; /* Separator for articles */
+    grid-column: 1;
+    width: 100%;
+    margin: 0;
+    padding: clamp(22px, 4vw, 36px);
+    border: 1px solid #d8e2eb;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(29, 53, 72, 0.08);
 }
 
 article h2 {
-    color: #333333; /* Dark text for titles */
-    margin-bottom: 10px;
+    margin: 0 0 14px;
+    color: #102a43;
+    line-height: 1.25;
 }
 
 article p {
-    color: #666666; /* Lighter text for the body */
-    line-height: 1.6; /* Improved readability */
+    color: #334e68;
 }
 
-/* Clear floats after the columns */
-section::after {
-  content: "";
-  display: table;
-  clear: both;
+article img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 18px auto;
+    border-radius: 10px;
 }
 
+a:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 4px;
+}
 
 footer {
-    background-color: #6a1b9a; /* Matching the header's vibrant purple */
+    background: #34104a;
     color: #ffffff;
     text-align: center;
-    padding: 1em 0;
+    padding: 18px 16px;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 800px) {
+    main {
+        width: min(100% - 20px, 1180px);
+        margin: 20px auto;
+    }
+
+    .blog-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .recent-posts {
+        position: static;
+        grid-column: 1;
+        grid-row: auto;
+    }
 }
 </style>
-
-<html>
-
-<head>
-    <title>DCCWEBSITE BLOG</title>
 </head>
 <body>
     <header>
         <h1>DCCWEBSITE BLOG</h1>
         <nav>
             <ul>
-                <li><a href="https://www.dccwebsite.com">Home</a></li>
-                <li><a href="https://www.dccwebsite.com/aboutme.html">About</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutme.html">About</a></li>
                 <li><a href="https://form.jotform.com/242413215628148">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
 
-    <section>
-  <nav1>
+	    <section class="blog-layout">
+	  <aside class="recent-posts">
     <h2>Recent Posts</h2>
     <ul>
-      <li><a href="#Passwords Stolen Again">Stolen Passwords</a></li>
-      <li><a href="#Home Title Theft">Title Theft</a></li>
-      <li><a href="#Our Loki">Loki</a></li>
-      <li><a href="#Smartphone">Smartphone photography</a></li>
-      <li><a href="#Windowsxx to Manjaro Linux">Windows to Manjaro Linux</a></li>
-      <li><a href="#Windowsxx to Linux Mint">Windows to Linux Mint</a></li>
-      <li><a href="#MyLastArch OS iso">Link to My Last Arch OS </a></li>
+	      <li><a href="#passwords-stolen">Stolen Passwords</a></li>
+	      <li><a href="#home-title-theft">Title Theft</a></li>
+	      <li><a href="#our-loki">Loki</a></li>
+	      <li><a href="#smartphone">Smartphone photography</a></li>
+	      <li><a href="#windows-to-manjaro">Windows to Manjaro Linux</a></li>
+	      <li><a href="#windows-to-linux-mint">Windows to Linux Mint</a></li>
+	      <li><a href="#mylastarch-os">Link to My Last Arch OS</a></li>
     </ul>
-  </nav1>
+	  </aside>
 
-          <article>
-            <section id="Passwords Stolen Again">
-            <h2>Has Your Password Been Stolen Again?</h2>
-            <img src="https://www.dccwebsite.com/images/databreach.jpg" width="600" heigth="338" alt="databreach">
+	          <article id="passwords-stolen">
+	            <h2>Has Your Password Been Stolen Again?</h2>
+	            <img src="images/databreach.jpg" width="600" height="338" alt="Illustration representing a data breach" loading="lazy" decoding="async">
             <p>Has your password or other data been stolen due to a Data Breach? This seems to be happening a lot these days.
                Personally I am getting sick and tired of opening up news on my phone or laptop and reading another article of some data breach happening.
                These articles always tell me to change my password, use a password manager and make sure I use complicated passwords.
@@ -172,10 +233,9 @@ footer {
                 </p>
         </article>
 
-          <article>
-            <section id="Home Title Theft">
-            <h2>Home Title Theft - How to protect yours for free</h2>
-            <img src="https://www.dccwebsite.com/images/title_theft.jpg" width="600" heigth="338" alt="titletheft">
+	          <article id="home-title-theft">
+	            <h2>Home Title Theft - How to protect yours for free</h2>
+	            <img src="images/title_theft.jpg" width="600" height="338" alt="Illustration representing home title theft" loading="lazy" decoding="async">
             <p>You've seen the commercials, where they show a homeowner losing their home because someone changed their title to their home
                 without their knowledge<br><br>
                This again goes with the fact that there are bad people out there stealing your information all of the time.<br>
@@ -193,10 +253,9 @@ footer {
         </article>
 
 
-        <article>
-            <section id="Our Loki">
+	        <article id="our-loki">
             <h2>Loki (Our Cat)</h2>
-            <img src="https://www.dccwebsite.com/images/Loki001.jpg" alt="Loki">
+	            <img src="images/Loki001.jpg" alt="Loki" width="450" height="499" loading="lazy" decoding="async">
             <p>Loki came into our lives in 2019. He was only 6 mo old. He was so cute and scared. I remember we closed the bedroom door and he immediately went under our bed. I had to remove the mattress and box spring to get to him. We figured out how to keep him from running under the bed and he went into the bedroom closet and hid there.
 
 After a while he got used to us and the room and warmed up to us.
@@ -225,10 +284,9 @@ There is not a day that goes by that we are remembering all the fun we had with 
 
 We have have a new cat (Thor) that we got while Loki was still alive to give him a friend. We did not know at the time what was ahead for us.</p>
         </article>
-        <article>
-        <section id="Smartphone">
+	        <article id="smartphone">
             <h2>SmartPhone Photography Basics</h2>
-            <img src="https://www.dccwebsite.com/images/smartphone.png" alt="Loki">
+	            <img src="images/smartphone.png" alt="Smartphone photography illustration" width="700" height="466" loading="lazy" decoding="async">
             <p>Improving your smartphone camera photography is easy a few simple tips. Clean your camera lens regularly to ensure sharp photos. Use manual controls like the exposure slider and tap-to-focus for more control over your images.
 
 Avoid using digital zoom, as this can reduce image quality. Instead, get closer to your subject or consider buying an attachable lens. And shoot in good lighting conditions whenever possible for the best results.
@@ -255,10 +313,9 @@ Use fill-in flash in the shade to brighten subjects. And experiment with differe
 
 Crop your images for better composition. Enable HDR for more detail in high-contrast scenes. Use the View on Map feature to remember photo locations, and try a selfie stick to capture a broader perspective.</p>
         </article>
-        <article>
-            <section id="Windowsxx to Manjaro Linux">
+	        <article id="windows-to-manjaro">
             <h2>Moving from Windows to Manjaro Linux</h2>
-            <img src="https://www.dccwebsite.com/images/Windows10.jpg" width="600" heigth="338" alt="WindowstoManjaroLinux">
+	            <img src="images/Windows10.jpg" width="600" height="338" alt="Windows 10 desktop before migrating to Manjaro Linux" loading="lazy" decoding="async">
             <p>With Windows 10 announcing that they will no longer be issueing security updates to Windows 10 and some of Windows 11 I have put together a set of instructions on how to move from Windows to Manjaro Linux which is a more secure OS than Windows is anyway and always has been.<br><br>
                If you want my help in accomplishing this beyond following the instructions below I can send you instructions on me taking over your computer to look at your system and make some decisions to help with the process.<br>
                I have chosen a version of Manjaro Linux that will always be kept up to date and works similar to how Windows works now.<br>
@@ -281,7 +338,7 @@ Instead of treating them as competing operating systems, a dual boot setup provi
             The First thing to do is to go to the Manjaro site and download the .iso file for installing.<br>
             
    Goto <a href="https://manjaro.org">manjaro.org</a> and click the Download button.<br>
-    <img src="https://www.dccwebsite.com/images/Screenshots/Manjaro_Download.png" width="300" heigth="169" alt="Manjaro Download"> 
+	    <img src="images/Screenshots/Manjaro_Download.png" width="300" height="169" alt="Manjaro download page" loading="lazy" decoding="async">
     <br>
    Download the xfce image
    This will take a few minutes based on your internet speed.<br>
@@ -368,19 +425,17 @@ I will now show you how to install Manjaro to your hard drive on your computer.<
         Select that if you want to go into your Windows OS.<br><br>
 
         For some suggestions on what to do after you are using Manjaro read this page:<br>
-        <a href="https://www.dccwebsite.com/manjaro.html">Manjaro info</a><br><br> 
+	        <a href="manjaro.html">Manjaro info</a><br><br>
    
         
         
-        Remember you can choose any "Linux OS" you would like. The instructions should be similar.<br>
-        Enjoy your new Operating System "free of Windows"
-        </p>
-        </article> 
+	        Remember you can choose any "Linux OS" you would like. The instructions should be similar.<br>
+	        Enjoy your new Operating System "free of Windows"
+	        </article>
 
-        <article>
-            <section id="Windowsxx to Linux Mint">
+	        <article id="windows-to-linux-mint">
             <h2>Moving from Windows to Linux Mint</h2>
-            <img src="https://www.dccwebsite.com/images/Windows10.jpg" width="600" heigth="338" alt="WindowstoLinuxMint">
+	            <img src="images/Windows10.jpg" width="600" height="338" alt="Windows 10 desktop before migrating to Linux Mint" loading="lazy" decoding="async">
             <p>With Windows 10 announcing that they will no longer be issueing security updates to Windows 10 and some of Windows 11 I have put together a set of instructions on how to move from Windows to Linux Mint which is a more secure OS than Windows is anyway and always has been.<br><br>
                If you want my help in accomplishing this beyond following the instructions below I can send you instructions on me taking over your computer to look at your system and make some decisions to help with the process.<br>
                I have chosen a version of Linux Mint that will always be kept up to date and works similar to how Windows works now.<br>
@@ -403,7 +458,7 @@ Instead of treating them as competing operating systems, a dual boot setup provi
             The First thing to do is to go to the Linux Mint site and download the .iso file for installing.<br>
             
    Goto <a href="https://linuxmint.com">LinuxMint.com</a> and click the Download button.<br>
-    <img src="https://www.dccwebsite.com/images/Screenshots/LinuxMint_Download.png" width="300" heigth="169" alt="LinuxMint Download"> 
+	    <img src="images/Screenshots/LinuxMint_Download.png" width="300" height="169" alt="Linux Mint download page" loading="lazy" decoding="async">
     <br>
    Download the Cinnamon Edition image
    This will take a few minutes based on your internet speed.<br>
@@ -484,28 +539,27 @@ I will now show you how to install Linux Mint to your hard drive on your compute
         Select that if you want to go into your Windows OS.<br><br>
 
         For some suggestions on what to do after you are using Linux Mint read this page:<br>
-        <a href="https://www.dccwebsite.com/linuxmint.html">Linux Mint info</a><br><br> 
+	        <a href="linuxmint.html">Linux Mint info</a><br><br>
    
         
         
-        Remember you can choose any "Linux OS" you would like. The instructions should be similar.<br>
-        Enjoy your new Operating System "free of Windows"
-        </p>
-        </article> 
+	        Remember you can choose any "Linux OS" you would like. The instructions should be similar.<br>
+	        Enjoy your new Operating System "free of Windows"
+	        </article>
 
-        <article>
-            <section id="MyLastArch OS iso">
-            <h2>My Last Arch OS page</h2>
-            <img src="https://www.dccwebsite.com/images/mylastarch.png" width="600" heigth="338" alt="databreach">
-            <p>Click this Link to take you to My Last Arch OS information. 
-                This is an OS I created based on Arch Linux. You can read all about it <a href="https://www.dccwebsite.com/mylastarch.html">here</a>.
+	        <article id="mylastarch-os">
+	            <h2>My Last Arch OS page</h2>
+	            <img src="images/mylastarch.png" width="600" height="338" alt="My Last Arch operating system desktop" loading="lazy" decoding="async">
+	            <p>Click this Link to take you to My Last Arch OS information.
+	                This is an OS I created based on Arch Linux. You can read all about it <a href="mylastarch.html">here</a>.
 
                 </p>
         </article>
 
 
-        <!-- More articles can be added here -->
-    </main>
+	        <!-- More articles can be added here -->
+	    </section>
+	</main>
 <script>
 var idcomments_acct = '0a1302b6596c6c2efea5b41fc248f50b';
 var idcomments_post_id;
@@ -515,9 +569,10 @@ var idcomments_post_url;
 <script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
 
     <footer>
-        <p>&copy; Copyright 2014<script>new Date().getFullYear()>2017&&document.write("-"+new Date().getFullYear());</script>, DCCWEBSTIE BLOG
-
-</p>
+        <p>&copy; Copyright 2014&ndash;<span id="copyright-year">2026</span>, DCCWEBSITE BLOG</p>
     </footer>
+    <script>
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

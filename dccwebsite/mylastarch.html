@@ -3,7 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MYLASTARCH is an approachable Arch-based Linux distribution with KDE Plasma, the Calamares installer, curated software, and rolling updates." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DCCWEBSITE" />
+  <meta property="og:title" content="MYLASTARCH — Your Last Arch Linux" />
+  <meta property="og:description" content="An approachable Arch-based Linux distribution with KDE Plasma, curated defaults, and rolling updates." />
+  <meta property="og:url" content="https://www.dccwebsite.com/mylastarch" />
+  <meta property="og:image" content="https://www.dccwebsite.com/images/mylastarch.png" />
+  <meta property="og:image:width" content="8000" />
+  <meta property="og:image:height" content="4500" />
+  <meta property="og:image:alt" content="MYLASTARCH Linux desktop" />
+  <meta name="twitter:card" content="summary_large_image" />
   <title>MYLASTARCH – Your Last Arch Linux</title>
+  <link rel="canonical" href="https://www.dccwebsite.com/mylastarch" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
@@ -506,7 +519,7 @@
         <div class="section-eyebrow">The Project</div>
         <h2 class="section-title">Built by the Community, for Everyone</h2>
         <p>MYLASTARCH started as a personal project to make Arch Linux accessible without sacrificing any of what makes Arch great — rolling releases, massive package selection, and full control.</p>
-        <p>Available at <strong style="color:var(--white)"><a href="https://www.dccwebsite.com">dccwebsite.com</a></strong>, the project is free, open-source, and welcomes contributions of all kinds.</p>
+	        <p>Available at <strong style="color:var(--white)"><a href="index.html">dccwebsite.com</a></strong>, the project is free, open-source, and welcomes contributions of all kinds.</p>
         <div class="about-badges">
           <span class="badge highlight">Open Source</span>
           <span class="badge">Arch-Based</span>
@@ -537,19 +550,20 @@
     <div class="footer-logo"><span>MY</span>LASTARCH</div>
     <p style="font-size:0.88rem; color:var(--muted); margin-top:0.3rem;">An Arch-based Linux distribution · dccwebsite.com</p>
     <div class="footer-links">
+      <a href="index.html">DCCWEBSITE Home</a>
       <a href="#features">Features</a>
       <a href="#desktops">Desktops</a>
       <a href="#about">About</a>
-      <a href="http://www.dccwebsite.com/aboutme.html">About Me</a>
+	      <a href="aboutme.html">About Me</a>
       <a href="#download">Download</a>
       <a href="https://github.com/mylastarch">GitHub</a>
       <a href="https://dccwebsite.forumotion.com">Forums</a>
     </div>
- <!--   <p class="footer-copy">&copy; 2026 MYLASTARCH · Free and open-source software</p> -->
-    <p class="footer-copy">&copy; Copyright 2014<script>new Date().getFullYear()>2017&&document.write("-"+new Date().getFullYear());</script>, MYLASTARCH · Free and open-source software
-
-    </p>
+    <p class="footer-copy">&copy; Copyright 2014&ndash;<span id="copyright-year">2026</span>, MYLASTARCH · Free and open-source software</p>
   </div>
 </footer>
+<script>
+  document.getElementById('copyright-year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>

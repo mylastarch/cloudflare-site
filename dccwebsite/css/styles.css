@@ -19,18 +19,18 @@ header p {
     margin-bottom: 30px;
 }
 
-#body-1 {
+.body-1 {
     background-image: url('/images/background1.jpg');
 
 }
 
-#body-2 {
+.body-2 {
     background-image: url('/images/background2.jpg');
 }
 
 
 /*
-#body-2 {
+.body-2 {
     visibility: hidden;   Hides element but preserves space 
 }
 */
@@ -99,4 +99,176 @@ li {
 
 #\00003123item {
   background-color: yellow;
+}
+
+/* Links page */
+.links-page {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 16px;
+    color: #172033;
+    background: #edf2f7;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.links-page *,
+.links-page *::before,
+.links-page *::after {
+    box-sizing: inherit;
+}
+
+.links-page .skip-link {
+    position: fixed;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 1000;
+    padding: 0.7rem 1rem;
+    color: #fff;
+    background: #111827;
+    border-radius: 0.4rem;
+    transform: translateY(-200%);
+}
+
+.links-page .skip-link:focus {
+    transform: translateY(0);
+}
+
+.links-page .site-nav {
+    width: min(100%, 1200px);
+    margin: 0 auto 0.75rem;
+}
+
+.links-page .site-nav a {
+    display: inline-block;
+    padding: 0.55rem 0.85rem;
+    color: #fff;
+    background: #223456;
+    border-radius: 0.4rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.links-page .site-nav a:hover {
+    color: #fff;
+    background: #075ea8;
+}
+
+.links-page .site-footer {
+    max-width: 1200px;
+    margin: 1rem auto 0;
+    padding: 1rem;
+    text-align: center;
+    color: #4b5563;
+}
+
+.links-page .site-footer p {
+    margin: 0;
+}
+
+.links-page table {
+    width: min(100%, 1200px);
+    margin: 0 auto 16px;
+}
+
+.links-page td {
+    vertical-align: top;
+}
+
+.links-page a {
+    color: #075ea8;
+    text-underline-offset: 0.15em;
+}
+
+.links-page a:hover {
+    color: #003f73;
+}
+
+.links-page a:focus-visible,
+.links-page select:focus-visible,
+.links-page button:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 3px;
+}
+
+.links-page select {
+    max-width: 100%;
+    min-height: 36px;
+    margin-top: 4px;
+    border: 1px solid #7a8798;
+    border-radius: 6px;
+    background: #fff;
+    color: #172033;
+}
+
+.links-page button {
+    min-height: 36px;
+    margin: 4px 0 0 4px;
+    padding: 0.35rem 0.7rem;
+    border: 0;
+    border-radius: 6px;
+    color: #fff;
+    background: #223456;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.links-page button:hover {
+    background: #075ea8;
+}
+
+.links-page .autism-facts {
+    display: inline-block;
+    max-width: 680px;
+    margin: 0 auto 12px;
+    padding-left: 24px;
+    text-align: left;
+}
+
+.links-page .autism-facts li {
+    margin-bottom: 8px;
+    list-style: disc;
+}
+
+.links-page .legacy-link-list {
+    display: inline-block;
+    margin: 0.5rem auto;
+    padding-left: 1.5rem;
+    text-align: left;
+}
+
+.links-page .section-label {
+    margin: 0.75rem 0 0.25rem;
+    padding: 0.2rem 0.4rem;
+    background: #ef4444;
+}
+
+.links-page .featured-links {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+@media (max-width: 760px) {
+    .links-page {
+        padding: 8px;
+        font-size: 17px;
+    }
+
+    .links-page table,
+    .links-page tbody,
+    .links-page tr,
+    .links-page td {
+        display: block;
+        width: 100% !important;
+    }
+
+    .links-page td {
+        margin-bottom: 10px;
+        overflow-wrap: anywhere;
+    }
+
+    .links-page td:hover {
+        transform: none;
+    }
 }

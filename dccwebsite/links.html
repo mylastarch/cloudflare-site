@@ -1,79 +1,29 @@
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>COMMONSENSE WEB SITE
-    </title>
-
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta http-equiv="Refresh" content="300">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!--/ <META NAME="author" CONTENT="Dan Cihon">
-<META NAME="keywords" CONTENT="beatles, john lennon, paul mccartney, ringo starr, george harrison, beatles news, poll, real audio, videos, pen pals, web boards, linda, fab four, paperbackwriter, web design tools, icons,  backgrounds, applets, photos, greeting cards, art and poetry, sound files, song of the week, trivia game">
-<META NAME="keywords" CONTENT="Autism, BreakDancing">
-<META NAME="description" CONTENT="An information page for sixties rock icons the Beatles from Liverpool, England. An information page for Autism.">
-<META NAME="description" CONTENT="Designed by DCC, the site is awesome and jammed with content."> /-->
-
-<link type="text/css" rel="stylesheet" href="css/styles.css">
-
-
-<script language="JavaScript1.2" type="text/javascript">
-
-/*<script>-/
-
-/*Day of the link script credit-
-By JavaScript Kit (www.javascriptkit.com)
-Over 200+ free scripts here!
-*/
-
-var daylinks=new Array()
-/*
-Enter the 31 urls below you wish to go to for each day of the month. Note that if the current month contains less than 31 days, then some of the urls will simply not be used
-*/
-
-daylinks[1]="http://www.cnn.com"
-daylinks[2]="http://www.abcnews.com"
-daylinks[3]="http://www.cnet.com"
-daylinks[4]="http://www.geocities.com"
-daylinks[5]="http://www.lycos.com"
-daylinks[6]="http://www.infoseek.com"
-daylinks[7]="http://tipcentral.net/"
-daylinks[8]="http://www.tripod.com"
-daylinks[9]="http://www.javascriptkit.com"
-daylinks[10]="http://www.wired.com"
-daylinks[11]="http://www.download.com"
-daylinks[12]="http://www.windows95.com"
-daylinks[13]="http://www.shareware.com"
-daylinks[14]="http://www.builder.com"
-daylinks[15]="http://www.htmlgoodies.com"
-daylinks[16]="http://www.webreference.com"
-daylinks[17]="http://www.webdeveloper.com"
-daylinks[18]="http://www.developer.com"
-daylinks[19]="http://www.news.com"
-daylinks[20]="http://www.techweb.com"
-daylinks[21]="http://www.loc.gov/index.html"
-daylinks[22]="http://www.eia.doe.gov/bookshelf/brochures/gasolinepricesprimer/eia1_2005primerM.html"
-daylinks[23]="http://www.nba.com"
-daylinks[24]="http://www.microsoft.com"
-daylinks[25]="http://www.netscape.com"
-daylinks[26]="http://www.answers.com"
-daylinks[27]="http://www.xml.com"
-daylinks[28]="http://www.espn.com"
-daylinks[29]="http://www.nbc.com"
-daylinks[30]="http://www.cbs.com"
-daylinks[31]="http://www.hotwired.com"
-
-var mydate=new Date()
-var today=mydate.getDate()
-</script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A curated collection of useful websites, community resources, technology references, entertainment, weather, and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="DCCWEBSITE">
+    <meta property="og:title" content="DCC on the Web — Useful Links">
+    <meta property="og:description" content="Explore a curated collection of community resources, technology references, entertainment, weather, and other useful websites.">
+    <meta property="og:url" content="https://www.dccwebsite.com/links">
+    <meta property="og:image" content="https://www.dccwebsite.com/images/DCC-Banner.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>DCC on the Web — Useful Links</title>
+    <link rel="canonical" href="https://www.dccwebsite.com/links">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 
-<body>
+<body class="links-page">
+	<a class="skip-link" href="#main-content">Skip to main content</a>
+	<nav class="site-nav" aria-label="Primary navigation">
+		<a href="index.html">DCCWEBSITE Home</a>
+	</nav>
+	<main id="main-content">
 
 <table border="0" width=100% cellpadding="0" cellspacing="0">
 	<tr>
@@ -83,57 +33,49 @@ var today=mydate.getDate()
 		</td>
 
 		<TD VALIGN=top ALIGN=CENTER width=50%>
-			<h2 class=”my3rdNewStyle”>DCC ON THE WEB</h2>
-			<B><SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
-			var mydate=new Date()
-			var year=mydate.getYear()
-			if (year<2000)
-			year=1900+year
-			var day=mydate.getDay()
-			var month=mydate.getMonth()
-			var daym=mydate.getDate()
-			if (daym<10)
-			daym=""+daym
-			var dayarray=new Array("Sun","Mon","Tues","Wed","Thurs","Fri","Sat")
-			var montharray=new Array("Jan","Feb","March","April","May","June","July","Aug","Sept","Oct","Nov","Dec")
-			document.write(""+dayarray[day]+", "+montharray[month]+" "+daym+", "+year+"")
-			</SCRIPT></b><br>
+			<h2 class="my3rdNewStyle">DCC ON THE WEB</h2>
+			<strong><time id="current-date"></time></strong>
+			<script>
+			const currentDate = new Date();
+			const dateElement = document.getElementById('current-date');
+			dateElement.dateTime = currentDate.toISOString().slice(0, 10);
+			dateElement.textContent = new Intl.DateTimeFormat('en-US', {
+				weekday: 'short',
+				month: 'short',
+				day: 'numeric',
+				year: 'numeric'
+			}).format(currentDate);
+			</script><br>
 			
 			<BR><BR>
 		</td>
 
-		<td align=right VALIGN=top width=25%><font size=-1>
-			<font size=-1>
-			<FORM METHOD=POST
-			ACTION="http://somesite.com/prog/adduser">
-			Check E-mail:
-			<select onChange="if(options[selectedIndex].value)
-			     window.location.href=(options[selectedIndex].value)">
-			<option>Select one ...
+		<td align=right VALIGN=top width=25%>
+			<form id="email-provider-form">
+			<label for="email-provider">Check email:</label>
+			<select id="email-provider" required>
+			<option value="" selected>Select one ...</option>
+			<option value="" disabled>──────────</option>
+			<option value="https://www.spectrum.net/">Spectrum</option>
+			<option value="https://mail.aol.com/">AOL Mail</option>
+			<option value="https://login.xfinity.com/login">Xfinity</option>
+			<option value="https://mail.yahoo.com/">Cox Mail (Yahoo)</option>
+			<option value="https://webmail.earthlink.net/">EarthLink</option>
+			<option value="https://webmail.juno.com/cgi-bin/login.cgi?domain=juno.com">Juno</option>
+			<option value="https://www.icloud.com/mail">iCloud Mail</option>
+			<option value="https://outlook.live.com/mail/">Outlook / Hotmail</option>
+			<option value="https://mail.google.com/">Gmail</option>
+			<option value="https://currently.att.yahoo.com/">AT&amp;T Mail</option>
+			<option value="https://mail.yahoo.com/">Yahoo Mail</option>
+            <option value="https://account.proton.me/mail">Proton Mail</option>
+			<option value="https://tuta.com">Tuta Mail</option>
+            <option value="https://www.zoho.com/mail/">Zoho Mail</option>
+            <option value="https://www.gmx.com/mail/">GMX Mail</option>
 
-			<option>
-			=====
-			<OPTION VALUE="http://webmail.adelphia.net/en_US_base/adelphia.net/?logout=1">Spectrum email</option>
-			<OPTION VALUE="http://webmail.aol.com">AOL</option>
-			<OPTION VALUE="https://login.xfinity.com/login">Xfinity</option>
-			<OPTION VALUE="http://webmail.cox.net/wwwredir/index.htm">Cox</option>
-			<OPTION VALUE="http://webmail.earthlink.net/">Lycos</option>
-			<OPTION VALUE="http://login.mail.eudoramail.com/">Eudora</option>
-			<OPTION VALUE="http://webmail.juno.com/">Juno</option>
-			<OPTION VALUE="https://www.icloud.com/mail">iCloud email</option>
-			<OPTION VALUE="http://www.hotmail.com">MSN Hotmail</option>
-			<OPTION VALUE="http://gmail.com/">Gmail</option>
-			<OPTION VALUE="http://yahoo.com">AT&T (Yahoo mail)</option>
-            <OPTION VALUE="https://account.proton.me/mail">Proton Mail</option>
-			<OPTION VALUE="https://tuta.com">Tutamail</option>
-            <OPTION VALUE="https://www.zoho.com/mail/">Zoho Mail</option>
-            <OPTION VALUE="https://www.gmx.com/mail/">GMX 65GB size</option>
-
-			</SELECT>
-			</font>
+			</select>
+			<button type="submit">Open</button>
 			</form>
 
-<!--			<br><img border="0" src="peace.gif" width="40" height="40" ALIGN="MIDDLE" alt="PEACE SIGN IMAGE"> -->
 			<b><FONT FACE="COURIER NEW, COURIER, MONO" SIZE="4" COLOR="BLACK">All You Need Is Love...<br>Give Peace A Chance!
 			</FONT>
 			</b>
@@ -142,111 +84,59 @@ var today=mydate.getDate()
 </table>
 
 
-<table id="body-1" BORDER=1 bordercolor=Black cellspacing=0 cellpadding=0 width=100% summary="This table is the SECOND table on this site">
+<table class="body-1" BORDER=1 bordercolor=Black cellspacing=0 cellpadding=0 width=100% summary="This table is the SECOND table on this site">
 	<tr>
-		<td align=center width=25%><font size=-1><a href="http://www.dccwebsite.com/testpage.html">TEST PAGE</a><br>
-			<a href="http://www.autism-society.org/">AUTISM SOCIETY</a><br>
-			<a href=http://www.ripoffreport.com/search.asp>RIP-OFF REPORTS</a></FONT>
+		<td align=center width=25%><font size=-1><a href="https://www.autism-society.org/">AUTISM SOCIETY</a><br>
+			<a href=https://www.ripoffreport.com/search.asp>RIP-OFF REPORTS</a></FONT>
 		</td>
 		<td align=center width=50%>
-			</script><font size=3><A HREF="https://www.familyecho.com/?p=START&c=nyrm33dd90c1wvbn&f=818269352236674006&lang=en">CIHON FAMILY TREE</A><BR>
-			</script><font size=4><A HREF="https://www.familyecho.com/?p=START&c=otuibr2qpqa8zpdg&f=434847341756191139&lang=en">WILLIAMS FAMILY TREE</A>
-			<BR>
-			<A HREF="#autism">AUTISM LINKS</A> | <A HREF="#BEATLES">BEATLES LINKS</A> | <A HREF="https://www.dccwebsite.com/blog.html">WEBLOG</A></FONT>
-			<br>
-			<A HREF="#community_help">COMMUNITY HELP</A>
+			<div class="featured-links">
+				<A HREF="https://www.familyecho.com/?p=START&c=nyrm33dd90c1wvbn&f=818269352236674006&lang=en">CIHON FAMILY TREE</A><BR>
+				<A HREF="https://www.familyecho.com/?p=START&c=otuibr2qpqa8zpdg&f=434847341756191139&lang=en">WILLIAMS FAMILY TREE</A><BR>
+				<A HREF="#autism">AUTISM LINKS</A> | <A HREF="#BEATLES">BEATLES LINKS</A> | <A HREF="blog.html">WEBLOG</A><br>
+				<A HREF="#community_help">COMMUNITY HELP</A>
+			</div>
 		</td>
 		<td align=center width=25%>
-			<font size=-1><a href="http://www.lawrencegoetz.com/programs/ipinfo/">SEE YOUR IP ADDRESS</A><br>
-			<a href="https://form.jotform.com/242413215628148">FEEDBACK </a><br><a href="http://www.speakeasy.net/speedtest/">Speakeasy Speed Test</a></font>
+			<font size=-1><a href="https://www.lawrencegoetz.com/programs/ipinfo/">SEE YOUR IP ADDRESS</A><br>
+			<a href="https://form.jotform.com/242413215628148">FEEDBACK </a><br><a href="https://www.speakeasy.net/speedtest/">Speakeasy Speed Test</a></font>
 		</td>
 	</tr>
 </table>
 
-<table id="body-2" BORDER=1 bordercolor=Black cellspacing=0 cellpadding=0 width=100% bgcolor=#88DD00 summary="This table is the SECOND table on this site">
+<table class="body-2" BORDER=1 bordercolor=Black cellspacing=0 cellpadding=0 width=100% bgcolor=#88DD00 summary="This table is the SECOND table on this site">
 
 	<TR>
 		<td align=center width=100%>
 		</td>
 	</tr>
 </table>
-<!--
-<table BORDER=1 bordercolor=Black cellspacing=0 cellpadding=0 width=100% bgcolor=#88DD00 summary="This table is the SECOND table on this site">
-
-	<TR>
-		<td align=center width=100%>
-
-<a href="today.htm" onClick="window.location=daylinks[today];return false">Click here for today's featured site!</a>
-<br>
-<SCRIPT LANGUAGE="JAVASCRIPT">
-var r_text = new Array ();
-r_text[0] = "";
-r_text[1] = "";
-r_text[2] = "";
-r_text[3] = "";
-r_text[4] = "";
-r_text[5] = "";
-r_text[6] = "";
-r_text[7] = "Tip Central - A place to get help on a variety of subjects";
-r_text[8] = "";
-r_text[9] = "";
-r_text[10] = "";
-r_text[11] = "";
-r_text[12] = "";
-r_text[13] = "";
-r_text[14] = "";
-r_text[15] = "";
-r_text[16] = "";
-r_text[17] = "";
-r_text[18] = "";
-r_text[19] = "";
-r_text[20] = "";
-r_text[21] = "Library of Congress";
-r_text[22] = "Energy Information Administration";
-r_text[23] = "NBA";
-r_text[24] = "";
-r_text[25] = "";
-r_text[26] = "Answers.com - Online Encyclopedia, Thesaurus, Dictionary definitions and more";
-r_text[27] = "";
-r_text[28] = "";
-r_text[29] = "";
-r_text[30] = "";
-r_text[31] = "";
-
-document.write(r_text[today]);
-
-
-</SCRIPT>
-
-		</td>
-	</tr>
-</table>
--->
-<table id="body-1" BORDER=1 bordercolor=Black cellspacing=0 cellpadding=0 width=100% summary="This table is the SECOND table on this site">
+	<table class="body-1" BORDER=1 bordercolor=Black cellspacing=0 cellpadding=0 width=100% summary="This table is the SECOND table on this site">
 	<tr>
 		<td valign=top width=25%>
-			<a href="http://www.google.com/webhp?complete=1&hl=en">Google Suggest</a>&nbsp;&nbsp;&nbsp;&nbsp;<font size=-1><a href=http://froogle.google.com/froogle>Froogle</a>
+			<a href="https://www.google.com/webhp?complete=1&hl=en">Google Suggest</a>&nbsp;&nbsp;&nbsp;&nbsp;<font size=-1><a href=https://froogle.google.com/froogle>Froogle</a>
 			<br>
-			<a href=http://www.google.com/imghp?hl=en>Images</a>-<a href=http://news.google.com/>News</a>-<a href=http://www.google.com/help/>Tips</a>-<a href="http://translate.google.com/translate_t">Translate</a>
-			</form>
+			<a href=https://www.google.com/imghp?hl=en>Images</a>-<a href=https://news.google.com/>News</a>-<a href=https://www.google.com/help/>Tips</a>-<a href="https://translate.google.com/translate_t">Translate</a>
 			<br>
+			</font>
 			<HR SIZE=1 COLOR=black>
-			<b><a target=_top href="http://www.searchbug.com/"><Center>Search the Web<br> with SearchBug</center></a></b>
+			<b><a target=_top href="https://www.searchbug.com/"><Center>Search the Web<br> with SearchBug</center></a></b>
 			<HR SIZE=1 COLOR=black>
-			&nbsp;<b>News Services:</b><font size=-1><br><a target=_top href=http://abcnews.go.com/>ABC</a>
-			-<a target=_top href=http://www.nbcnews.com>NBC</a>
-			-<a target=_top href=http://www.riverfronttimes.com/>RFT</a>
-			-<a target=_top href=http://www.pbs.org/newshour/newshour_index.html>PBS</a>
+			&nbsp;<b>News Services:</b><font size=-1><br><a target=_top href=https://abcnews.go.com/>ABC</a>
+			-<a target=_top href=https://www.nbcnews.com>NBC</a>
+			-<a target=_top href=https://www.riverfronttimes.com/>RFT</a>
+			-<a target=_top href=https://www.pbs.org/newshour/newshour_index.html>PBS</a>
 			-<a target=_top href=https://www.upi.com>UPI</a>
-			<br><a target=_top href=http://www.usatoday.com/>USATODAY</a>
-			-<a target=_top href=http://www.washingtonpost.com/>WPOST</a>
-			-<a target=_top href=http://www.cbsnews.com/>CBS</a>
-			<BR><a target=_top href=http://www.cnn.com/>CNN</a>
-			-<a target=_top href=http://www.foxnews.com/>FOX</a>
+			<br><a target=_top href=https://www.usatoday.com/>USATODAY</a>
+			-<a target=_top href=https://www.washingtonpost.com/>WPOST</a>
+			-<a target=_top href=https://www.cbsnews.com/>CBS</a>
+			<BR><a target=_top href=https://www.cnn.com/>CNN</a>
+			-<a target=_top href=https://www.foxnews.com/>FOX</a>
 			-<a target=_top href=https://www.ms.now/>MS NOW</a>
-			<BR><a target=_top href=http://news.npr.org/>NPR</a>
-			-<a target=_top href=http://www.reuters.com/>REUTERS</a>-<a target=_top href="HTTP://WWW.NYTIMES.COM">NY TIMES</a>
+			<BR><a target=_top href=https://news.npr.org/>NPR</a>
+			-<a target=_top href=https://www.reuters.com/>REUTERS</a>-<a target=_top href="https://WWW.NYTIMES.COM">NY TIMES</a>
 			-<a href=https://apnews.com>APNEWS</a>
+			</font>
 			<HR SIZE=1 COLOR=black>
 			&nbsp;<b>Personal Links:</b><br>
 			<font size=-1>
@@ -257,19 +147,13 @@ document.write(r_text[today]);
 			<HR SIZE=1 COLOR=black>
 			&nbsp;<b>Site Information:</b><br>
 			<font size=-1>
-			&#149; <a href="https://dccwebsite.com/aboutme.html">About Me</a><br>
-			&#149; <a href=https://form.jotform.com/242413215628148>Contact Us</a><br>
-			&#149; <A HREF=>New</a><br>
-			&#149; <a href=>FUTURE</a><br>
-			&#149; <a href=>Site Map</a> | <a href=>FUTURE FAQs</a><br>
-			&#149; <a href=>FUTURE</a> | <a href=>FUTURE</a><br>
-			&#149; <a target=_top HREF=>FUTURE</a>
-			</form>
+			&#149; <a href="aboutme.html">About Me</a><br>
+			&#149; <a href=https://form.jotform.com/242413215628148>Contact Us</a>
 			</FONT>
 			<HR SIZE=1 COLOR=black>
 			&nbsp;<b>Useful Information:</b><br>
 			<font size=-1>
-			&#149; <a href="HTTP://WWW.MAPQUEST.COM">MAPS/DRIVING DIRECTIONS</a></font>
+			&#149; <a href="https://WWW.MAPQUEST.COM">MAPS/DRIVING DIRECTIONS</a></font>
 			<br><br>
 			<HR SIZE=1 COLOR=black>
 			&nbsp;<b>Fun Stuff:</b><font size=-1><br>
@@ -280,16 +164,18 @@ document.write(r_text[today]);
 			<HR SIZE=1 COLOR=black>
 			&nbsp;<b>Humor:</b><font size=-1><br>
 			<a target=_top href="https://www.rd.com/list/political-jokes/">POLITICAL HUMOR</a><BR>
+			</font>
 			<HR SIZE=1 COLOR=black>
 			&nbsp;<b>Cool Tools:</b><font size=-1><br>
 			<a target=_top href="https://tableizer.journalistopia.com">SPREADSHEET TO HTML</a><BR>
+			</font>
 			<HR SIZE=2 COLOR=black>
 			<table width=100%>
 				<TD BGCOLOR=#00AAFF WIDTH=25% align=center><font size=4 color=000000>
 					<b>LINUX</b></FONT><br>
 				</td>
 			</TABLE>
-			<a target=_top href="https://blog.udemy.com/why-use-linux/"><font size=3>Why Use Linux</a></font><BR>
+			<font size=3><a target=_top href="https://blog.udemy.com/why-use-linux/">Why Use Linux</a></font><BR>
 			<HR SIZE=2 COLOR=black>
 			&nbsp;<b>Linux Rolling Release Distros:</b><font size=3><br>
 			<a target=_top href="https://archlinux.org">ARCH LINUX</a><BR>
@@ -301,16 +187,18 @@ document.write(r_text[today]);
 			<a target=_top href="https://wiki.debian.org/DebianTesting">DEBIAN TESTING</a><BR>
 			<a target=_top href="https://voidlinux.org">VOID LINUX</a><BR>
 			<a target=_top href="https://clearlinux.github.io">CLEAR LINUX</a><BR>
+			</font>
 			<HR SIZE=2 COLOR=black>
 			&nbsp;<b>Distros for Advanced Users:</b><font size=3><br>
 			<a target=_top href="https://www.gentoo.org">GENTOO LINUX</a><BR>
-			<a target=_top href="http://www.slackware.com/info/">SLACKWARE LINUX</a><BR>
+			<a target=_top href="https://www.slackware.com/info/">SLACKWARE LINUX</a><BR>
 			<a target=_top href="https://www.blackarch.org">BLACKARCH LINUX</a><BR>
 			<a target=_top href="https://www.kali.org">KALI LINUX</a><BR>
 			<a target=_top href="https://peppermintos.com">PEPPERMINT LINUX</a><BR>
 			<a target=_top href="https://www.whonix.org">WHONIX LINUX</a><BR>
 			<a target=_top href="https://tails.net">TAILS LINUX</a><BR>
 			<a target=_top href="https://www.openmandriva.org">OPEN MANDRIVA LINUX</a><BR>
+			</font>
 			<HR SIZE=2 COLOR=black>
 			&nbsp;<b>Distros for Beginners:</b><font size=3><br>
 			<a target=_top href="https://ubuntu.com/desktop">UBUNTU LINUX</a><BR>
@@ -319,123 +207,99 @@ document.write(r_text[today]);
 			<a target=_top href="https://mxlinux.org">MX LINUX</a><BR>
 			<a target=_top href="https://zorin.com">ZORIN LINUX</a><BR>
 			<a target=_top href="https://www.linuxliteos.com/index.html">LINUX LITE</a><BR>
+			</font>
 			<HR SIZE=2 COLOR=black>
 			&nbsp;<b>Misc Linux References:</b><font size=3><br>
 			<a target=_top href="https://distrowatch.com">DISTROWATCH</a><BR>
+			</font>
 			<HR SIZE=2 COLOR=black>
 
 		</td>
 		
 		<td align=center width=50%>
-		<CENTER><B><a TARGET=_TOP HREF="https://www.cdc.gov/">CENTERS FOR DISEASE CONTROL & PREVENTION</B></a></CENTER>
-				<center>
+		<CENTER><B><a TARGET=_TOP HREF="https://www.cdc.gov/">CENTERS FOR DISEASE CONTROL & PREVENTION</a></B></CENTER>
 				<HR SIZE=1 COLOR=black>
-				<CENTER><B><font face="Arial" size="+2" color="GREEN"><a TARGET=_TOP HREF=http://www.osu.edu/index.php>THE OHIO STATE UNIVERSITY</font></B></a></CENTER>
+				<CENTER><B><font face="Arial" size="+2" color="GREEN"><a TARGET=_TOP HREF=https://www.osu.edu/index.php>THE OHIO STATE UNIVERSITY</a></font></B></CENTER>
 			<HR SIZE=1 COLOR=black>
-				<CENTER><B><font face="Arial" size="+2" color="BROWN"><a TARGET=_TOP HREF=https://wmich.edu>WESTERN MICHIGAN UNIVERSITY</font></B></a></CENTER>
+				<CENTER><B><font face="Arial" size="+2" color="BROWN"><a TARGET=_TOP HREF=https://wmich.edu>WESTERN MICHIGAN UNIVERSITY</a></font></B></CENTER>
 			<HR SIZE=1 COLOR=black>
-			<b><p align="center"><font face="Arial" size="+2" color="BLUE"><a name=BEATLES>THE BEATLES</A></font></p></B>
+			<h2 id="BEATLES">THE BEATLES</h2>
 			<BLOCKQUOTE>"The Love You Take is Equal to the Love You Make"</BLOCKQUOTE>
 			<a target=_top href="https://www.beatles-a-rama.com/"><strong>BEATLES-A-RAMA</strong></a><BR>
-			<a target=_top href="http://www.thefab40.com/calendar.html"><strong>BEATLES ANNIVERSARY CALENDAR</strong></a><BR>
-			<a target=_top href="http://beatles.ncf.ca/timeline.html#65">THE BEATLES TIMELINE</a><br>
-			<a target=_top href="http://www.thebeatles.com">THE BEATLES DOT COM</a><br>
+			<a target=_top href="https://www.thefab40.com/calendar.html"><strong>BEATLES ANNIVERSARY CALENDAR</strong></a><BR>
+			<a target=_top href="https://beatles.ncf.ca/timeline.html#65">THE BEATLES TIMELINE</a><br>
+			<a target=_top href="https://www.thebeatles.com">THE BEATLES DOT COM</a><br>
 			<a target=_top href="https://brunchradio.com/"><strong>BEATLE BRUNCH</strong></a><BR>
 			<a target=_top href="https://brunchradio.com/radio-stations/">BEATLE BRUNCH STATIONS</a><br>
-			<a target=_top href="http://www.beatlesagain.com/">The Internet Beatles Album</a><br>
-			<a target=_top href="http://www.rarebeatles.com/mainmenu.htm">Songs, Pictures and Stories</a><br>
+			<a target=_top href="https://www.beatlesagain.com/">The Internet Beatles Album</a><br>
 			<a target=_top href="https://www.liveabout.com/search?q=The+Beatles">ABOUT.COM'S Beatles Index of Links</a><br>
-			<a target=_top href="http://www.iamthebeatles.com/">I Am the Beatles</a><br>
-			<a target=_top href="http://www.columbia.edu/~brennan/beatles/">Joseph Brennan's Beatles Website</a><br>
+			<a target=_top href="https://www.iamthebeatles.com/">I Am the Beatles</a><br>
+			<a target=_top href="https://www.columbia.edu/~brennan/beatles/">Joseph Brennan's Beatles Website</a><br>
 			<a target=_top href="https://www.beatlesbible.com/albums/">The Beatles Complete Discography</a><br>
 			<a target=_top href="https://bootlegbeatles.com/">The Bootleg Beatles (The Band)</a><br>
 			<a target=_top href="https://time.com/search/?q=The+Beatles">Time Magazine - The Beatles</a><br>
-			<a target=_top href="http://www.beatles.net/">The Beatles.net</a><br>
-			<a target=_top href="https://beatlessearch.tripod.com/podfans.htm">Beatles Beatles Beatles</a><br>
-			<a target=_top href="http://www.beatles-unlimited.com/">BEATLES UNLIMITED MAGAZINE</a><br>
+			<a target=_top href="https://www.beatles-unlimited.com/">BEATLES UNLIMITED MAGAZINE</a><br>
 			<a target=_top href="https://www.usefultrivia.com/music_trivia/beatles_trivia_index.html">Beatles Trivia Quiz</a><br>
-			<a target=_top href="http://gernhardt.com/beatles/index.shtml">Harald Gernhardt's Beatles Site - since 1994</a><br>
+			<a target=_top href="https://gernhardt.com/beatles/index.shtml">Harald Gernhardt's Beatles Site - since 1994</a><br>
 			<a target=_top href="https://www.rockhall.com/inductees/beatles">Rock n Roll Hall of Fame Article</a><br>
-			<a target=_top href="http://beatles.ncf.ca/timeline.html">The Beatles Timeline</a><br>
-			<br>
-			<li><a href="https://www.johnlennon.com/">JOHN 1940-1980</a>
-			<BR>
-			<li><a href="http://www.paulmccartney.com">PAUL</a>
-			<li><a href="http://www.beatlesagain.com/bgeorge.html">GEORGE 1943-2001</a>
-			<li><a href="https://www.ringostarr.com/">RINGO</a>
-			<br>
-			<span style="background-color: #dd0000"><b>CLASSIC ROCK INFO</b></span></font><br>
-			&#149; <font size=-1><a href="https://www.liveabout.com/tour-schedules-748338" class="sa"><b>Tour Schedules</b></a></font><br>
-			&#149; <font size=-1><a href="http://www.rockonthenet.com/archive/2004/rs500songs1.htm" class="sa"><b>Top 500 Rock Songs</b></a></font><br>
-			&#149; <font size=-1><a href="https://digitaldreamdoor.com/pages/best_albumsddd.html" class="sa"><b>Top 300 Albums</b></a></font><br>
-			&#149; <font size=-1><a href="https://www.musicgrotto.com/best-classic-rock-songs/" class="sa"><b>Top Picks in Classic Rock</b></a></font><br>
-			&#149; <font size=-1><a href="https://ultimateclassicrock.com/category/news/" class="sa"><b>Classic Rock News</b></a></FONT><br>
+			<a target=_top href="https://beatles.ncf.ca/timeline.html">The Beatles Timeline</a><br>
+			<ul class="legacy-link-list">
+				<li><a href="https://www.johnlennon.com/">JOHN 1940-1980</a></li>
+				<li><a href="https://www.paulmccartney.com">PAUL</a></li>
+				<li><a href="https://www.beatlesagain.com/bgeorge.html">GEORGE 1943-2001</a></li>
+				<li><a href="https://www.ringostarr.com/">RINGO</a></li>
+			</ul>
+			<p class="section-label"><strong>CLASSIC ROCK INFO</strong></p>
+			<ul class="legacy-link-list">
+				<li><a href="https://www.liveabout.com/tour-schedules-748338" class="sa"><strong>Tour Schedules</strong></a></li>
+				<li><a href="https://digitaldreamdoor.com/pages/best_albumsddd.html" class="sa"><strong>Top 300 Albums</strong></a></li>
+				<li><a href="https://www.musicgrotto.com/best-classic-rock-songs/" class="sa"><strong>Top Picks in Classic Rock</strong></a></li>
+				<li><a href="https://ultimateclassicrock.com/category/news/" class="sa"><strong>Classic Rock News</strong></a></li>
+			</ul>
 			<HR SIZE=1 COLOR=black>
-			<B><FONT FACE="COURIER NEW, COURIER, MONO" SIZE="4" COLOR="BLACK">
-			<span style="background-color: #ffcc00" id="flashlink1" flashtype=1 flashcolor="yellow">APRIL IS AUTISM AWARNESS MONTH</SPAN></FONT></B>
+			<p><strong><span style="background-color: #ffcc00">APRIL IS AUTISM ACCEPTANCE MONTH</span></strong></p>
 
-			<font size=3 color=000000><a name=autism><b>AUTISM</a></b>
-			<br>
-			<B>Autism is...</B>
-			<B>   <li>A daily part of 1 million American's lives.</B>
-			<B>   <li>Boys are 4 times more likely, 1 in every 150, to be affected.</B>
-			<B>   <li>Occurring in as many as 1 in every 44 births.</B>
-			<B>   <li>A life long condition with no medical treatment protocol and no known cure.</B>
-			<BR>
-			<CENTER><B><a target=_top href="https://autismpartnershipfoundation.org">AUTISM PARTNERSHIP FOUNDATION of California</b></a></center>
-			<CENTER><B><a target=_top href="https://abasolutions.com">ABA SOLUTIONS</b></a></center>
-			<CENTER><B><a target=_top href="http://www.autismspeaks.org/index2.php">AUTISM SPEAKS</b></a></center>
-			<CENTER><B><a target=_top href="https://act.autismspeaks.org/site/TR/Walk/StLouis?fr_id=6694&pg=entry">AUTISM WALK IN ST.LOUIS</b></a></center>
+			<h2 id="autism">AUTISM</h2>
+			<p><strong>Current information:</strong></p>
+			<ul class="autism-facts">
+				<li>Autism spectrum disorder is a developmental disability caused by differences in the brain.</li>
+				<li>About 1 in 31 eight-year-old children in 16 monitored U.S. communities were identified with autism in 2022.</li>
+				<li>Autism was identified more than three times as often among boys as among girls in those communities.</li>
+				<li>Autism occurs across all racial, ethnic, and socioeconomic groups.</li>
+			</ul>
+			<p><a href="https://www.cdc.gov/autism/data-research/index.html">Source: CDC Autism Data and Statistics</a></p>
+			<CENTER><B><a target=_top href="https://autismpartnershipfoundation.org">AUTISM PARTNERSHIP FOUNDATION of California</a></B></center>
+			<CENTER><B><a target=_top href="https://abasolutions.com">ABA SOLUTIONS</a></B></center>
+			<CENTER><B><a target=_top href="https://www.autismspeaks.org/index2.php">AUTISM SPEAKS</a></B></center>
+			<CENTER><B><a target=_top href="https://act.autismspeaks.org/site/TR/Walk/StLouis?fr_id=6694&pg=entry">AUTISM WALK IN ST.LOUIS</a></B></center>
 
-			<CENTER><B><a target=_top href=http://www.abainternational.org/><FONT FACE="COURIER NEW, COURIER, MONO" SIZE="4" COLOR="RED">ABA INTERNATIONAL</b></FONT></a></center>
-			<CENTER><B><a target=_top href="http://www.moaba.org/"><FONT FACE="COURIER NEW, COURIER, MONO" SIZE="5" COLOR="RED">MOABA</b></FONT></a></center>
-			<CENTER><B><a target=_top href=http://www.autismtoday.com/>Autism Today</b></a></center>
-			<CENTER><B><a target=_top href="https://www.healisautism.com/post/importance-of-public-awareness-for-autism">PUBLIC AUTISM AWARENESS </b></a></center>
-			<CENTER><B><a TARGET=_TOP href="http://members.tripod.com/RSaffran/aba.html">ABA Resources for Recovery from Autism/PDD/Hyperlexia</B></a></CENTER>
-			<CENTER><B><a TARGET=_TOP href="https://www.ssdmo.org/Page/726">SPECIAL SCHOOL DISTRICT OF ST. LOUIS COUNTY, MO</B></a></CENTER>
-			<center><b><a target=_top href="http://www.dougflutie.org/">Doug Flutie, Jr. Foundation for Autism</b></a></center>
-			<center><b><a target=_top href="http://www.givingback.org/GIVINGBACK/mellanby/mellanbyhome.htm">The Mellanby Autism Foundation</b></a></center>
-			<center><b><a target=_top href="http://www.autism.org/contents.html">Center for the Study of Autism </b></a></center>
-			<center><b><a target=_top href="http://www.autism.com/ari/contents.html">Autism Research Institute</b></a></center>
-			<center><b><a target=_top href="http://www.autism-resources.com/">AUTISM RESOURCES</b></a></center>
-			<center><b><a target=_top href="http://www.canfoundation.org/">Cure Autism Now Foundation</b></a></center>
-			<center><b><a target=_top href="http://www.autism-pdd.net/">Autism-PDD Resources Network.</b></a></center>
-			<center><b><a target=_top href="http://www.naar.org/">National Alliance for Autism Research (NAAR)</b></a></center>
-			<center><b><a target=_top href="http://www.autism.net/">Geneva Centre for Autism</b></a></center>
-			<center><b><a target=_top href="http://www.futurehorizons-autism.com/">Future Horizons - Autism</b></a></center>
-			<center><b><a target=_top href="http://www.nimh.nih.gov/publicat/autism.cfm">National Institute of Mental Health (NIMH)</b></a></center>
-			<center><b><a target=_top href="http://www.nichd.nih.gov/autism/">National Institute of Child Health and Human Development (NICHD)</b></a></center>
-			<center><b><a target=_top href="http://www.nlm.nih.gov/medlineplus/autism.html">MEDLINEplus - Autism</b></a></center>
-			<center><b><a target=_top href="http://www.mo-feat.org/">Missouri - Families for Effective Autism Treatment</b></a></center>
-			<center><b><a target=_top href="http://www.autism-uk.ed.ac.uk/">Autism-UK Electronic Mailing List</b></a></center>
-			<center><b><a target=_top href="http://www.autismuk.com/index13.htm#pec">S.F.T.A.H.  Society For The Autistically Handicapped.</b></a></center>
-			<center><b><a target=_top href="http://www.autism-alabama.org/frameset.html">The Autism Society of Alabama (ASA)</b></a></center>
-			<center><b><a target=_top href="http://www.patientcenters.com/autism/">Patient-Centered Guides Web Site</b></a></center>
-			<center><b><a target=_top href="http://osiris.sunderland.ac.uk/autism/">The Autism Research Unit</b></a></center>
-			<center><b><a target=_top href="http://home.ptd.net/~rjd/autism/">The Autism Depot</b></a></center>
-			<center><b><a target=_top href="http://www.transmil.nl/alp/">The Autism Link Page</b></a></center>
-			<center><b><a target=_top href="http://ani.autistics.org/">AUTISM NETWORK INTERNATIONAL (ANI)</b></a></center>
-			<center><b><a target=_top href="http://www.autism-india.org/">Action for Autism (AFA) - India</b></a></center>
-			<center><b><a target=_top href="http://www.autcom.org/">Autism National Committee</b></a></center>
-			<center><b><a target=_top href="http://www.unlockingautism.org/main.asp">Unlocking Autism</b></a></center>
-			<center><b><a target=_top href="http://www.teacch.com/20ques.htm">AUTISM PRIMER: TWENTY QUESTIONS AND ANSWERS</b></a></center>
-			<center><b><a target=_top href="http://autism.about.com/mbody.htm">Autism/Pervasive Developmental Disorders - About.com</b></a></center>
-			<center><b><a target=_top href="http://www.autism.ca/">Autism treatment services of Canada</b></a></center>
-			<center><b><a target=_top href="http://trainland.tripod.com/">Beyond Autism</b></a></center>
-			<center><b><a target=_top href="http://www.unc.edu/~cory/autism-info/CHALU.html#autiinfo">Chapel Hill Autism Local Unit</b></a></center>
-			<center><b><a target=_top href="http://home.vicnet.net.au/~autism/">AUTISM VICTORIA</b></a></center>
-			<center><b><a target=_top href="http://www.healingwell.com">HealingWell.com</b></a></center>
+			<CENTER><B><a target=_top href=https://www.abainternational.org/><FONT FACE="COURIER NEW, COURIER, MONO" SIZE="4" COLOR="RED">ABA INTERNATIONAL</FONT></a></B></center>
+			<CENTER><B><a target=_top href="https://www.moaba.org/"><FONT FACE="COURIER NEW, COURIER, MONO" SIZE="5" COLOR="RED">MOABA</FONT></a></B></center>
+			<CENTER><B><a target=_top href=https://www.autismtoday.com/>Autism Today</a></B></center>
+			<CENTER><B><a target=_top href="https://www.healisautism.com/post/importance-of-public-awareness-for-autism">PUBLIC AUTISM AWARENESS</a></B></center>
+			<center><b><a target=_top href="https://www.canfoundation.org/">Cure Autism Now Foundation</a></b></center>
+			<center><b><a target=_top href="https://www.autism-pdd.net/">Autism-PDD Resources Network.</a></b></center>
+			<center><b><a target=_top href="https://www.autism.net/">Geneva Centre for Autism</a></b></center>
+			<center><b><a target=_top href="https://www.futurehorizons-autism.com/">Future Horizons - Autism</a></b></center>
+			<center><b><a target=_top href="https://www.nimh.nih.gov/publicat/autism.cfm">National Institute of Mental Health (NIMH)</a></b></center>
+			<center><b><a target=_top href="https://www.nlm.nih.gov/medlineplus/autism.html">MEDLINEplus - Autism</a></b></center>
+			<center><b><a target=_top href="https://www.mo-feat.org/">Missouri - Families for Effective Autism Treatment</a></b></center>
+			<center><b><a target=_top href="https://www.patientcenters.com/autism/">Patient-Centered Guides Web Site</a></b></center>
+			<center><b><a target=_top href="https://www.autism-india.org/">Action for Autism (AFA) - India</a></b></center>
+			<center><b><a target=_top href="https://www.autcom.org/">Autism National Committee</a></b></center>
+			<center><b><a target=_top href="https://www.autism.ca/">Autism treatment services of Canada</a></b></center>
+			<center><b><a target=_top href="https://www.healingwell.com">HealingWell.com</a></b></center>
 			<BR>
 			<HR SIZE=1 COLOR=black>
 			<table width=100%>
 				<TR>
-					<TD BGCOLOR=#FF0000 WIDTH=50% align=center><font size=4 color=000000>
-						<a name=SEX OFFENDERS><b>SEX OFFENDERS LIST</b></A></font>
+					<TD id="sex-offenders" BGCOLOR=#FF0000 WIDTH=50% align=center><font size=4 color=000000>
+						<b>SEX OFFENDERS LIST</b></font>
 					</td>
 				</TR>
 			</TABLE>
-			<center><b><a target=_top href="https://www.parentsformeganslaw.org/sex-offender-search/">LINKS TO SEX OFFENDER REGISTRIES NATIONWIDE</b></a></center>
-            <center><b><a target=_top href="http://www.mshp.dps.missouri.gov/MSHPWeb/PatrolDivisions/CRID/SOR/SORPage.html">MISSOURI SEX OFFENDER REGISTRY</b></a></center>
+			<center><b><a target=_top href="https://www.parentsformeganslaw.org/sex-offender-search/">LINKS TO SEX OFFENDER REGISTRIES NATIONWIDE</a></b></center>
+            <center><b><a target=_top href="https://www.mshp.dps.missouri.gov/MSHPWeb/PatrolDivisions/CRID/SOR/SORPage.html">MISSOURI SEX OFFENDER REGISTRY</a></b></center>
 
 		</td>
 
@@ -443,18 +307,18 @@ document.write(r_text[today]);
 				<table width=100%>
 					<tr>
 						<TD BGCOLOR=#11BB00 WIDTH=25% align=center><font size=3 color=000000>
-							ANTI-VIRUS INFO
+							ANTI-VIRUS INFO</font>
 						</TD>
 					</TR>
 				</TABLE>
 
 
-			<center><b><a target=_top href="https://www.trendmicro.com/en_us/forHome/products/housecall.html">ONLINE SCAN</b></a></center>
-			<center><b><a target=_top href="https://www.eset.com/us/home/online-scanner/">ESET ONLINE SCAN</b></a></center>
-			<center><b><a target=_top href="https://www.f-secure.com/us-en/home/free-tools/online-scanner">SECURE ONLINE SCAN</b></a></center>
-			<center><b><a target=_top href="https://www.safetydetectives.com/vulnerability-tool/">SCAN</b></a></center>
-			<center><b><a target=_top href="https://support.norton.com/sp/static/external/tools/npe.html">NORTON POWER ERASER</b></a></center>
-			<center><b><a href=https://www.clamav.net>CLAMAV FOR LINUX</b></a></center>
+			<center><b><a target=_top href="https://www.trendmicro.com/en_us/forHome/products/housecall.html">ONLINE SCAN</a></b></center>
+			<center><b><a target=_top href="https://www.eset.com/us/home/online-scanner/">ESET ONLINE SCAN</a></b></center>
+			<center><b><a target=_top href="https://www.f-secure.com/us-en/home/free-tools/online-scanner">SECURE ONLINE SCAN</a></b></center>
+			<center><b><a target=_top href="https://www.safetydetectives.com/vulnerability-tool/">SCAN</a></b></center>
+			<center><b><a target=_top href="https://support.norton.com/sp/static/external/tools/npe.html">NORTON POWER ERASER</a></b></center>
+			<center><b><a href=https://www.clamav.net>CLAMAV FOR LINUX</a></b></center>
 			<HR SIZE=1 COLOR=black>
 			<table width=100%>
 				<TD BGCOLOR=#00AAFF WIDTH=25% align=center><font size=3 color=000000>
@@ -465,18 +329,16 @@ document.write(r_text[today]);
 			<a href=https://charmed.fandom.com/wiki/Charmed_(TV_series)/>CHARMED ONES.COM</a><br>
 			<HR SIZE=1 COLOR=black>
 			&nbsp;<b>Sports Information:</b><font size=-1><br>
-				<a target=_top href=http://sports.yahoo.com/>Yahoo Sports</a><BR>
-				<a target=_top href=http://sports.yahoo.com/mlb/scoreboard>MLB SCOREBOARD</a>-
-				<a target=_top href=http://www.nfl.com/scores>NFL SCORES</a><br>
-				<a target=_top href=http://espn.go.com/>ESPN</a><BR>
-				<a target=_top href="http://www.Players-SB.com/cgi-bin/affiliate.pl?aid=19448&sid=1">
-				<img src="http://www.Players-SB.com/banners/aff-psb-125.gif" ALT=""border=0></a><BR>
-				<a target=_top href=https://www.oddsshark.com>ODDS SHARK</a>-
-				<a target=_top href=>FUTURE</a><BR>
+				<a target=_top href=https://sports.yahoo.com/>Yahoo Sports</a><BR>
+				<a target=_top href=https://sports.yahoo.com/mlb/scoreboard>MLB SCOREBOARD</a>-
+				<a target=_top href=https://www.nfl.com/scores>NFL SCORES</a><br>
+				<a target=_top href=https://espn.go.com/>ESPN</a><BR>
+				<a target=_top href="https://www.Players-SB.com/cgi-bin/affiliate.pl?aid=19448&amp;sid=1">
+				<img src="https://www.Players-SB.com/banners/aff-psb-125.gif" alt="Players Sportsbook" loading="lazy" decoding="async" border=0></a><BR>
+				<a target=_top href=https://www.oddsshark.com>ODDS SHARK</a><BR>
 			<HR SIZE=1 COLOR=black>
 			&nbsp;<b>Weather Information:</b><font size=-1><br>
 				<a target=_top href=https://www.suncam.tv/weather.html>ABOUT FLORIDA HURRICANES</a><br>
-				<a target=_top href=http://www.intellicast.com/>INTELLICAST</a><br>
 				<a target=_top href=https://www.wunderground.com/weather/us/mo/saint-charles>ST. CHARLES MO FORECAST</a><BR>
 				<a target=_top href=https://www.wunderground.com/weather/us/ca/long-beach>LONG BEACH CA FORECAST</a>
 				<BR>
@@ -488,14 +350,14 @@ document.write(r_text[today]);
 				<a target=_top href=https://severestudios.com/>SEVERESTUDIOS STORM CHASERS</a><br>
 				</FONT>
 			<HR SIZE=1 COLOR=black>
-			&nbsp;<b>PC Hardware Help:</b><font size=-1><br><a target=_top href=http://www.dell.com/us/en/gen/default.htm>DELL</a>-<a target=_top href=http://www.ibm.com/support/us/>IBM</a>-<a target=_top href=http://www.nvidia.com/content/drivers/drivers.asp>NVIDIA</a>-<a target=_top href=http://us.creative.com/support/>CREATIVE LABS</a><br><a target=_top href=>FUTURE</a>-<a target=_top href=>FUTURE</a>-<a target=_top href=>FUTURE</a><BR><a target=_top href=>FUTURE</a>-<a target=_top href=>FUTURE</a>-<a target=_top href=>FUTURE</a>-<a target=_top href=>FUTURE</a><BR><a target=_top href=>FUTURE</a>-<a target=_top href=>FUTURE</a>-<a target=_top href=>FUTURE</a>-<a target=_top href=>FUTURE</a></FONT>
+			&nbsp;<b>PC Hardware Help:</b><font size=-1><br><a target=_top href=https://www.dell.com/us/en/gen/default.htm>DELL</a>-<a target=_top href=https://www.ibm.com/support/us/>IBM</a>-<a target=_top href=https://www.nvidia.com/content/drivers/drivers.asp>NVIDIA</a>-<a target=_top href=https://us.creative.com/support/>CREATIVE LABS</a></FONT>
 			<HR SIZE=1 COLOR=black>
 			&nbsp;<b>PC Software Help:</b><font size=-1><br>
-			<a target=_top href=http://support.microsoft.com/default.aspx?scid=fh;[ln];kbhowto>MICROSOFT KNOWLEDGE BASE</a>-
-			<a target=_top href=http://usa.autodesk.com/adsk/servlet/index?siteID=123112&id=1068444>AUTODESK</a>-
-			<a target=_top href=http://www.nvidia.com/>NVIDIA</a><BR>
+			<a target=_top href=https://support.microsoft.com/>MICROSOFT SUPPORT</a>-
+			<a target=_top href=https://usa.autodesk.com/adsk/servlet/index?siteID=123112&id=1068444>AUTODESK</a>-
+			<a target=_top href=https://www.nvidia.com/>NVIDIA</a><BR>
 			<a target=_top href=https://us.norton.com/antivirus>NORTON ANTI-VIRUS</a><BR>
-			<a target=_top href=http://housecall.trendmicro.com/>ONLINE ANTI-VIRUS SCANNER</a><br>
+			<a target=_top href=https://housecall.trendmicro.com/>ONLINE ANTI-VIRUS SCANNER</a><br>
 			<a target=_top href=https://www.file-extensions.org/>FILE EXTENSIONS</a>
 			<HR SIZE=1 COLOR=black>
 						<table width=100%>
@@ -503,14 +365,13 @@ document.write(r_text[today]);
 					<b>GENERAL INFO</b></FONT>
 				</td>
 			</TABLE>
-			&nbsp;<a target=_top href=http://www.infoplease.com>INFOPLEASE WEBSITE</a>
+			&nbsp;<a target=_top href=https://www.infoplease.com>INFOPLEASE WEBSITE</a>
 			<BR>
 			&nbsp;<font size=-1><a target=_top href=https://www.floridarambler.com/category/tampa-bay-getaways/>THINGS TO DO IN FLORIDA</a></font><br>
-			&nbsp;<font size=-1><a target=_top href=http://www.zabasearch.com/>ZABA SEARCH</a></font><br>
-			&nbsp;<font size=-1><a target=_top href=http://www.switchboard.com>SwitchBoard.com - PhoneBook</a></font><br>
+			&nbsp;<font size=-1><a target=_top href=https://www.zabasearch.com/>ZABA SEARCH</a></font><br>
+			&nbsp;<font size=-1><a target=_top href=https://www.switchboard.com>SwitchBoard.com - PhoneBook</a></font><br>
 			&nbsp;<font size=-1><a target=_top href=https://www.anywho.com/>AnyWho - PhoneBook</a></font><br>
 			&nbsp;<font size=-1><a target=_top href=https://www.flightview.com/>REALTIME FLIGHT TRACKING</a></font><br>
-			&nbsp;<font size=-1><a target=_top href=http://www.flightarrivals.com/cgi-bin/WebObjects/Flights.woa/1/wo/0uc511duZceIvzWXtc/2.13>FlightArrivals.com</a></font><br>
 			&nbsp;<A HREF="https://store.randmcnally.com/" TARGET="_top">Travel Store on RandMcNally.com</A></FONT><BR>
 			<HR SIZE=1 COLOR=black>
 			<table width=100%>
@@ -518,7 +379,7 @@ document.write(r_text[today]);
 					<b>AUTOMOTIVE</b><BR></FONT>
 				</td>
 			</TABLE>
-			<CENTER><font size=-1><a target=_top href=http://www.marksalem.com/>MARK SALEM AUTOMOTIVE ADVICE</a></font></CENTER>
+			<CENTER><font size=-1><a target=_top href=https://www.marksalem.com/>MARK SALEM AUTOMOTIVE ADVICE</a></font></CENTER>
 			&nbsp;<font size=-1><a target=_top href=https://www.gasbuddy.com/gasprices/florida/bradenton>BRADENTON FL GAS PRICES</a></font><br>
 			<HR SIZE=1 COLOR=black>
 				<table width=100%>
@@ -538,8 +399,8 @@ document.write(r_text[today]);
 			<CENTER><font size=3><a target=_top href=https://www.unfilteredkidneyconvos.com>UNFILTERED KIDNEY CONVERSATIONS</a></font></CENTER>
 				<HR SIZE=1 COLOR=black>
 				<table width=100%>
-					<TD BGCOLOR=#223456 WIDTH=25% align=center><font size=3 color=#FFFFFF>
-						<b><a name=community_help>COMMUNITY HELP</b><BR></FONT>
+					<TD id="community_help" BGCOLOR=#223456 WIDTH=25% align=center><font size=3 color=#FFFFFF>
+						<b>COMMUNITY HELP</b><BR></FONT>
 					</td>
 				</TABLE>
 			<CENTER><font size=3><a target=_top href=https://swmicoalition.org/>SOUTHWEST MICHIGAN COALITION</a></font></CENTER>
@@ -561,10 +422,9 @@ document.write(r_text[today]);
 	</tr>
 </table>
 
-<table id="body-2" BORDER=1 bordercolor=Black cellspacing=0 cellpadding=5 width=100%>
+<table class="body-2" BORDER=1 bordercolor=Black cellspacing=0 cellpadding=5 width=100%>
 	<TR>
-		<td width=25% align=left valign=top>
-			<a name=FUTURE>
+		<td id="FUTURE" width=25% align=left valign=top>
 				<table width=100%>
 					<tr>
 						<td bgcolor=#FFAA00 WIDTH=25% align=center><font size=3 color=000000>
@@ -573,15 +433,15 @@ document.write(r_text[today]);
 					</tr>
 				</table>
 
-			<a href=http://www.earthcam.com/usa/florida/tampa/>TAMPA FL</a><br>
+			<a href=https://www.earthcam.com/usa/florida/tampa/>TAMPA FL</a><br>
 			<a href=https://www.southhavenmi.gov/parks_and_recreation/south_beach_cam.php>SOUTH HAVEN MICHIGAN BEACH</a><br>
 			<a href=https://www.earthcam.com/usa/missouri/stlouis/?cam=arch_riverview>ST. LOUIS MO</a><br>
 			<a href=https://www.weatherbug.com/traffic-cam/saint-louis-mo-63110>ST. LOUIS TRAFFIC CAMS</a><br>
 			<a href=https://livebeachcam.net/st-louis-cardinals-webcam/>NEW BUSCH STADIUM CAM</a><br>
 			<a href=https://www.earthcam.com/usa/florida/annamariaisland/?cam=annamariaisland>Bradenton Beach Cam</a><br>
-			<a href=http://www.suncam.tv/>Sun Cam.TV Mobile Florida Cam</a><br>
+			<a href=https://www.suncam.tv/>Sun Cam.TV Mobile Florida Cam</a><br>
 			<a href=https://www.earthcam.com/world/england/london/abbeyroad/?cam=abbeyroad_uk>ABBEY ROAD WEB CAM</a><br>
-			<a href=http://www.viewgallia.com/>GALLIPOLIS OHIO</a><br>
+			<a href=https://www.viewgallia.com/>GALLIPOLIS OHIO</a><br>
 			<a href=https://myearthcam.com/seaair>BERMUDA CAM</a><br>
 			<a href=https://www.iplivecams.com/live-cams/the-westin-grand-cayman-seven-mile-beach-resort-east-view-cayman-islands/>CAYMAN ISLAND CAM</a><br>
 			<a href=https://www.iplivecams.com/live-cams/condo-hotels-playa-del-carmen-quintana-roo-mexico/>CARIBBEAN OCEAN LIVE CAM</a><br>
@@ -599,22 +459,21 @@ document.write(r_text[today]);
 		</TD>
 	</TR>
 </TABLE>		
+	</main>
 		
 
 
-<TABLE ALIGN=center BORDER=0>
-	<TR>
-		<TD>Copyright &#169; 2026, DCCATHOME All rights reserved.
-		</TD>
-	</TR>
-</TABLE>
+<footer class="site-footer">
+	<p>Copyright &copy; <span id="copyright-year">2026</span>, DCCATHOME. All rights reserved.</p>
+</footer>
 
-<TABLE ALIGN=RIGHT BORDER=0>
-	<TR>
-		<TD><img border="0" ALT="" src="apache_pb.gif">
-		</TD>
-	</TR>
-</TABLE>
+<script>
+	document.getElementById('copyright-year').textContent = new Date().getFullYear();
+	document.getElementById('email-provider-form').addEventListener('submit', function (event) {
+		event.preventDefault();
+		const destination = document.getElementById('email-provider').value;
+		if (destination) window.location.href = destination;
+	});
+</script>
 
 </body>
-

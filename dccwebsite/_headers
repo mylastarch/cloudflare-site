@@ -1,0 +1,36 @@
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+/testpage*
+  X-Robots-Tag: noindex
+
+/comment*
+  X-Robots-Tag: noindex
+
+/database*
+  X-Robots-Tag: noindex
+
+/eCommerce*
+  X-Robots-Tag: noindex
+
+/blog2*
+  X-Robots-Tag: noindex
+
+/blog3*
+  X-Robots-Tag: noindex
+
+/blog4*
+  X-Robots-Tag: noindex
+
+/howto*
+  X-Robots-Tag: noindex
+
+/techdoc*
+  X-Robots-Tag: noindex
+
+/images/*.ged
+  X-Robots-Tag: noindex
+  Content-Disposition: attachment
