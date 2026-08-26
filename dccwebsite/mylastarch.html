@@ -20,359 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg:        #0d0f14;
-      --bg2:       #13161e;
-      --bg3:       #1a1e29;
-      --border:    #252a38;
-      --text:      #e4e8f0;
-      --muted:     #8892aa;
-      --accent:    #7c3aed;      /* violet – signature color */
-      --accent2:   #06b6d4;      /* cyan – secondary */
-      --accent3:   #f59e0b;      /* amber – highlights */
-      --white:     #ffffff;
-      --mono:      'Space Mono', monospace;
-      --sans:      'Space Grotesk', sans-serif;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--sans);
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-
-    a { color: inherit; text-decoration: none; }
-
-    /* ── NAV ─────────────────────────────── */
-    nav {
-      position: sticky; top: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 2rem;
-      height: 64px;
-      background: rgba(13,15,20,0.85);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-logo {
-      font-family: var(--mono);
-      font-size: 1.15rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      color: var(--white);
-    }
-    .nav-logo span { color: var(--accent); }
-    .nav-links { display: flex; gap: 2rem; }
-    .nav-links a {
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--muted);
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--white); }
-    .nav-cta {
-      background: var(--accent);
-      color: var(--white) !important;
-      padding: 0.45rem 1.1rem;
-      border-radius: 6px;
-      font-weight: 700 !important;
-      transition: opacity 0.2s !important;
-    }
-    .nav-cta:hover { opacity: 0.85; }
-
-    /* ── HERO ────────────────────────────── */
-    .hero {
-      position: relative;
-      min-height: 92vh;
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      text-align: center;
-      padding: 5rem 1.5rem 4rem;
-      overflow: hidden;
-    }
-    /* radial glow backdrop */
-    .hero::before {
-      content: '';
-      position: absolute;
-      width: 720px; height: 720px;
-      background: radial-gradient(circle, rgba(124,58,237,0.18) 0%, transparent 70%);
-      top: 50%; left: 50%;
-      transform: translate(-50%, -55%);
-      pointer-events: none;
-    }
-    .hero-eyebrow {
-      display: inline-block;
-      font-family: var(--mono);
-      font-size: 0.78rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--accent2);
-      margin-bottom: 1.4rem;
-      border: 1px solid rgba(6,182,212,0.3);
-      padding: 0.3rem 0.9rem;
-      border-radius: 99px;
-    }
-    .hero h1 {
-      font-family: var(--mono);
-      font-size: clamp(2.8rem, 8vw, 6rem);
-      font-weight: 700;
-      line-height: 1.05;
-      letter-spacing: -0.02em;
-      color: var(--white);
-      margin-bottom: 0.2rem;
-    }
-    .hero h1 .accent { color: var(--accent); }
-    .hero-sub {
-      font-size: clamp(1.05rem, 2.5vw, 1.35rem);
-      color: var(--muted);
-      max-width: 560px;
-      margin: 1.4rem auto 2.5rem;
-    }
-    .hero-buttons {
-      display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;
-    }
-    .btn {
-      display: inline-block;
-      padding: 0.75rem 2rem;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      cursor: pointer;
-      transition: transform 0.15s, opacity 0.15s;
-    }
-    .btn:hover { transform: translateY(-2px); opacity: 0.9; }
-    .btn-primary { background: var(--accent); color: var(--white); }
-    .btn-secondary {
-      background: transparent;
-      color: var(--text);
-      border: 1px solid var(--border);
-    }
-    .btn-secondary:hover { border-color: var(--accent); color: var(--white); }
-
-    /* terminal snippet below hero */
-    .hero-terminal {
-      margin-top: 3.5rem;
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.2rem 1.6rem;
-      font-family: var(--mono);
-      font-size: 0.88rem;
-      color: var(--accent2);
-      text-align: left;
-      max-width: 480px;
-      width: 100%;
-    }
-    .hero-terminal .prompt { color: var(--accent3); }
-    .hero-terminal .cmd   { color: var(--white); }
-
-    /* ── STATS STRIP ─────────────────────── */
-    .stats {
-      display: flex; justify-content: center; flex-wrap: wrap; gap: 0;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      background: var(--bg2);
-    }
-    .stat {
-      flex: 1 1 180px;
-      padding: 2.2rem 1.5rem;
-      text-align: center;
-      border-right: 1px solid var(--border);
-    }
-    .stat:last-child { border-right: none; }
-    .stat-num {
-      font-family: var(--mono);
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: var(--accent);
-    }
-    .stat-label {
-      font-size: 0.82rem;
-      color: var(--muted);
-      margin-top: 0.3rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
-
-    /* ── SECTION SHARED ──────────────────── */
-    section { padding: 6rem 1.5rem; }
-    .container { max-width: 1100px; margin: 0 auto; }
-    .section-eyebrow {
-      font-family: var(--mono);
-      font-size: 0.75rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--accent2);
-      margin-bottom: 0.75rem;
-    }
-    .section-title {
-      font-size: clamp(1.7rem, 4vw, 2.6rem);
-      font-weight: 700;
-      color: var(--white);
-      line-height: 1.2;
-      margin-bottom: 1rem;
-    }
-    .section-desc {
-      color: var(--muted);
-      max-width: 540px;
-      font-size: 1.05rem;
-    }
-
-    /* ── FEATURES ────────────────────────── */
-    #features { background: var(--bg); }
-    .features-header { margin-bottom: 3.5rem; }
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-    .feature-card {
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 2rem;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-    .feature-card:hover { border-color: var(--accent); transform: translateY(-3px); }
-    .feature-icon {
-      font-size: 1.9rem;
-      margin-bottom: 1rem;
-    }
-    .feature-card h3 {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 0.5rem;
-    }
-    .feature-card p { font-size: 0.92rem; color: var(--muted); line-height: 1.6; }
-
-    /* ── DESKTOPS ────────────────────────── */
-    #desktops { background: var(--bg2); }
-    .desktops-header { margin-bottom: 3rem; }
-    .desktop-list {
-      display: flex; flex-wrap: wrap; gap: 0.65rem;
-    }
-    .desktop-tag {
-      font-family: var(--mono);
-      font-size: 0.82rem;
-      padding: 0.4rem 1rem;
-      border: 1px solid var(--border);
-      border-radius: 99px;
-      color: var(--muted);
-      transition: all 0.2s;
-      cursor: default;
-    }
-    .desktop-tag:hover { border-color: var(--accent); color: var(--white); background: rgba(124,58,237,0.1); }
-    .desktop-note {
-      margin-top: 1.5rem;
-      font-size: 0.88rem;
-      color: var(--muted);
-    }
-
-    /* ── DOWNLOAD ────────────────────────── */
-    #download { background: var(--bg); }
-    .download-box {
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 3.5rem 3rem;
-      display: flex; flex-wrap: wrap;
-      gap: 2rem; align-items: center; justify-content: space-between;
-      position: relative; overflow: hidden;
-    }
-    .download-box::after {
-      content: '';
-      position: absolute;
-      width: 400px; height: 400px;
-      background: radial-gradient(circle, rgba(124,58,237,0.12) 0%, transparent 70%);
-      bottom: -100px; right: -100px;
-      pointer-events: none;
-    }
-    .download-text h2 {
-      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 0.6rem;
-    }
-    .download-text p { color: var(--muted); max-width: 420px; }
-    .download-meta {
-      font-family: var(--mono);
-      font-size: 0.78rem;
-      color: var(--muted);
-      margin-top: 1rem;
-    }
-    .download-meta span { color: var(--accent2); }
-
-    /* ── ABOUT ───────────────────────────── */
-    #about { background: var(--bg2); }
-    .about-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem; align-items: center;
-    }
-    @media (max-width: 700px) { .about-inner { grid-template-columns: 1fr; } }
-    .about-text p { color: var(--muted); margin-bottom: 1rem; }
-    .about-badges { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.5rem; }
-    .badge {
-      font-family: var(--mono);
-      font-size: 0.78rem;
-      padding: 0.3rem 0.9rem;
-      border-radius: 6px;
-      border: 1px solid var(--border);
-      color: var(--muted);
-    }
-    .badge.highlight { border-color: var(--accent); color: var(--accent); }
-    .about-code {
-      background: var(--bg3);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.6rem;
-      font-family: var(--mono);
-      font-size: 0.82rem;
-      line-height: 1.8;
-      color: var(--muted);
-    }
-    .about-code .kw { color: var(--accent); }
-    .about-code .str { color: var(--accent2); }
-    .about-code .val { color: var(--accent3); }
-
-    /* ── FOOTER ──────────────────────────── */
-    footer {
-      border-top: 1px solid var(--border);
-      background: var(--bg);
-      padding: 3rem 1.5rem;
-      text-align: center;
-    }
-    .footer-inner { max-width: 1100px; margin: 0 auto; }
-    .footer-logo {
-      font-family: var(--mono);
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: var(--white);
-      margin-bottom: 0.5rem;
-    }
-    .footer-logo span { color: var(--accent); }
-    .footer-links {
-      display: flex; gap: 2rem; justify-content: center;
-      flex-wrap: wrap; margin: 1.2rem 0;
-    }
-    .footer-links a { font-size: 0.88rem; color: var(--muted); transition: color 0.2s; }
-    .footer-links a:hover { color: var(--white); }
-    .footer-copy { font-size: 0.8rem; color: var(--muted); }
-
-    /* ── RESPONSIVE NAV ──────────────────── */
-    @media (max-width: 640px) {
-      .nav-links { display: none; }
-      .stat { flex: 1 1 140px; }
-      .download-box { padding: 2rem 1.5rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="css/mylastarch.css" />
 </head>
 <body>
 
@@ -402,10 +50,10 @@
   </div>
   <div class="hero-terminal">
     <div><span class="prompt">$</span> <span class="cmd">neofetch</span></div>
-    <div style="color:var(--muted)">OS: MYLASTARCH (Arch-based)</div>
-    <div style="color:var(--muted)">Kernel: linux-cachyos</div>
-    <div style="color:var(--muted)">WM/DE: <span style="color:var(--accent2)">KDE Plasma</span></div>
-    <div style="color:var(--muted)">Shell: bash / zsh / fish</div>
+    <div class="terminal-detail">OS: MYLASTARCH (Arch-based)</div>
+    <div class="terminal-detail">Kernel: linux-cachyos</div>
+    <div class="terminal-detail">WM/DE: <span class="text-accent2">KDE Plasma</span></div>
+    <div class="terminal-detail">Shell: bash / zsh / fish</div>
   </div>
 </header>
 
@@ -469,10 +117,10 @@
       <p class="section-desc">MYLASTARCH currently ships with a fully pre-configured KDE Plasma desktop. Additional environments are on the roadmap.</p>
     </div>
     <div class="desktop-list">
-      <span class="desktop-tag" style="border-color:var(--accent); color:var(--accent); background:rgba(124,58,237,0.1);">✦ KDE Plasma</span>
-      <span class="desktop-tag" style="opacity:0.45; cursor:not-allowed;">GNOME <em style="font-size:0.75em;">(soon)</em></span>
-      <span class="desktop-tag" style="opacity:0.45; cursor:not-allowed;">XFCE <em style="font-size:0.75em;">(soon)</em></span>
-      <span class="desktop-tag" style="opacity:0.45; cursor:not-allowed;">More… <em style="font-size:0.75em;">(coming)</em></span>
+      <span class="desktop-tag desktop-tag-active">✦ KDE Plasma</span>
+      <span class="desktop-tag desktop-tag-unavailable">GNOME <em class="roadmap-note">(soon)</em></span>
+      <span class="desktop-tag desktop-tag-unavailable">XFCE <em class="roadmap-note">(soon)</em></span>
+      <span class="desktop-tag desktop-tag-unavailable">More… <em class="roadmap-note">(coming)</em></span>
     </div>
     <p class="desktop-note">KDE Plasma includes a curated theme, icon set, wallpapers, and panel layout out of the box.</p>
   </div>
@@ -492,21 +140,20 @@
         </div>
       </div>
       <div>
-        <a href="https://filedn.com/llKia39vCGhFEIFcfUifr6S/mylastarch-Rc2-2026.07.27-x86_64.iso" class="btn 
-        btn-primary" style="font-size:1.05rem; padding: 1rem 2.5rem;">⬇ Download ISO</a>
-        <div style="font-size:0.8rem; color:var(--muted); margin-top:0.75rem; text-align:center;">
+        <a href="https://filedn.com/llKia39vCGhFEIFcfUifr6S/mylastarch-Rc2-2026.07.27-x86_64.iso" class="btn btn-primary download-button">⬇ Download ISO</a>
+        <div class="download-checksum">
           SHA256 checksum included
         </div>
       </div>
     </div>
 
     <!-- Realease 1.0.0 teaser -->
-    <div style="margin-top:1.5rem; background:var(--bg2); border:1px solid var(--border); border-left: 3px solid var(--accent3); border-radius:10px; padding:1.4rem 1.8rem; display:flex; flex-wrap:wrap; gap:1rem; align-items:center; justify-content:space-between;">
+    <div class="release-teaser">
       <div>
-        <div style="font-family:var(--mono); font-size:0.75rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent3); margin-bottom:0.4rem;">⚒ In Development — Production Release</div>
-        <p style="color:var(--muted); font-size:0.92rem; max-width:560px;">The next release is on the way. Release 1.0.0 will be the first production release. <strong style="color:var(--white)">1.0.0 </strong>will contain all packages on the Rc1 and Rc2 and more refinements based on community feedback.</p>
+        <div class="release-eyebrow">⚒ In Development — Production Release</div>
+        <p class="release-description">The next release is on the way. Release 1.0.0 will be the first production release. <strong class="text-white">1.0.0 </strong>will contain all packages on the Rc1 and Rc2 and more refinements based on community feedback.</p>
       </div>
-      <div style="font-family:var(--mono); font-size:0.82rem; color:var(--muted); white-space:nowrap;">Status: <span style="color:var(--accent3)">Work in progress</span></div>
+      <div class="release-status">Status: <span class="text-accent3">Work in progress</span></div>
     </div>
   </div>
 </section>
@@ -519,7 +166,7 @@
         <div class="section-eyebrow">The Project</div>
         <h2 class="section-title">Built by the Community, for Everyone</h2>
         <p>MYLASTARCH started as a personal project to make Arch Linux accessible without sacrificing any of what makes Arch great — rolling releases, massive package selection, and full control.</p>
-	        <p>Available at <strong style="color:var(--white)"><a href="index.html">dccwebsite.com</a></strong>, the project is free, open-source, and welcomes contributions of all kinds.</p>
+	        <p>Available at <strong class="text-white"><a href="index.html">dccwebsite.com</a></strong>, the project is free, open-source, and welcomes contributions of all kinds.</p>
         <div class="about-badges">
           <span class="badge highlight">Open Source</span>
           <span class="badge">Arch-Based</span>
@@ -548,7 +195,7 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-logo"><span>MY</span>LASTARCH</div>
-    <p style="font-size:0.88rem; color:var(--muted); margin-top:0.3rem;">An Arch-based Linux distribution · dccwebsite.com</p>
+    <p class="footer-tagline">An Arch-based Linux distribution · dccwebsite.com</p>
     <div class="footer-links">
       <a href="index.html">DCCWEBSITE Home</a>
       <a href="#features">Features</a>
