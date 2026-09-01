@@ -349,6 +349,40 @@
     .future-teaser { border-left-color: var(--accent2); }
     .future-teaser .release-eyebrow { color: var(--accent2); }
 
+    /* ── COMMUNITY ───────────────────────── */
+    #community { background: var(--bg); padding-top: 0; }
+    .community-card {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 1.5rem;
+      align-items: center;
+      padding: 2.5rem 3rem;
+      background: linear-gradient(135deg, rgba(124,58,237,0.14), rgba(6,182,212,0.06));
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .community-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+    .community-icon { font-size: 2.5rem; }
+    .community-content h2 {
+      color: var(--white);
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+    .community-content p { color: var(--muted); max-width: 650px; }
+    .community-button { white-space: nowrap; text-align: center; }
+
+    @media (max-width: 760px) {
+      .community-card {
+        grid-template-columns: 1fr;
+        padding: 2rem 1.5rem;
+        text-align: center;
+      }
+      .community-content p { margin: 0 auto; }
+      .community-button { justify-self: center; }
+    }
+
     /* ── ABOUT ───────────────────────────── */
     #about { background: var(--bg2); }
     .about-inner {
