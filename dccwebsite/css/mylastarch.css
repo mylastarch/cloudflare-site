@@ -394,6 +394,8 @@
     }
     .future-teaser { border-left-color: var(--accent2); }
     .future-teaser .release-eyebrow { color: var(--accent2); }
+    .october-teaser { border-left-color: var(--accent); }
+    .october-teaser .release-eyebrow { color: var(--accent); }
     .pi-instructions {
       margin-top: 1.5rem;
       display: grid;
