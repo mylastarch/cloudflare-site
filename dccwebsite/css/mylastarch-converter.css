@@ -1,0 +1,68 @@
+.converter-hero { min-height: 82vh; }
+.converter-hero h1 { font-size: clamp(2.5rem, 7vw, 5.3rem); }
+.compatibility-section, .preserve-section, .desktop-preview { background: var(--bg2); }
+.compatibility-grid, .package-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+.compatibility-card, .package-card {
+  padding: 2rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+.compatibility-card h3, .package-card h3, .steps h3 { color: var(--white); margin-bottom: .65rem; }
+.compatibility-card ul { margin-left: 1.2rem; color: var(--muted); }
+.compatibility-card li { margin: .55rem 0; }
+.compatibility-card.supported { border-top: 3px solid var(--accent2); }
+.compatibility-card.unsupported { border-top: 3px solid var(--accent3); }
+.supported h3 { color: var(--accent2); }
+.unsupported h3 { color: var(--accent3); }
+.beta-note {
+  margin-top: 1.5rem;
+  padding: 1rem 1.2rem;
+  border-left: 3px solid var(--accent3);
+  background: rgba(245,158,11,.06);
+  color: var(--muted);
+}
+.beta-note strong { color: var(--accent3); }
+.split-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.split-panel p, .check-list { color: var(--muted); }
+.check-list { list-style: none; }
+.check-list li { padding: .6rem 0 .6rem 1.8rem; border-bottom: 1px solid var(--border); position: relative; }
+.check-list li::before { content: '✓'; position: absolute; left: 0; color: var(--accent2); font-weight: 700; }
+code { font-family: var(--mono); color: var(--accent2); }
+.package-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.package-card { background: var(--bg2); }
+.package-card p { color: var(--muted); font-size: .92rem; }
+.package-source { color: var(--accent2); font: 700 .72rem var(--mono); text-transform: uppercase; letter-spacing: .08em; margin-bottom: .75rem; }
+.repo-source { color: var(--accent); }
+.aur-source { color: var(--accent3); }
+.comparison-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+.comparison-card { position: relative; background: var(--bg); border: 1px solid var(--border); border-radius: 14px; padding: .75rem; overflow: hidden; }
+.comparison-card img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 8px; transition: opacity .2s; }
+.comparison-card a:hover img { opacity: .88; }
+.comparison-card p { color: var(--muted); font-size: .85rem; padding: .8rem .5rem .25rem; }
+.comparison-label { position: absolute; z-index: 2; top: 1.4rem; left: 1.4rem; padding: .3rem .75rem; border-radius: 99px; background: rgba(13,15,20,.9); border: 1px solid var(--accent3); color: var(--accent3); font: 700 .72rem var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+.after-label { border-color: var(--accent2); color: var(--accent2); }
+.steps { list-style: none; display: grid; gap: 1rem; }
+.steps li { display: grid; grid-template-columns: auto 1fr; gap: 1.2rem; padding: 1.4rem; background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; }
+.steps li > span { display: grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: rgba(124,58,237,.16); border: 1px solid var(--accent); color: var(--accent); font: 700 .9rem var(--mono); }
+.steps p { color: var(--muted); }
+.install-instructions { margin-top: 2rem; padding: 2rem; background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; }
+.install-instructions h3 { color: var(--white); margin-bottom: .5rem; }
+.install-instructions p { color: var(--muted); }
+.install-instructions pre { margin: 1rem 0; padding: 1.2rem; border-radius: 8px; background: var(--bg); border: 1px solid var(--border); overflow-x: auto; }
+.install-instructions pre code { color: var(--accent2); line-height: 1.8; }
+.install-instructions details { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+.install-instructions summary { color: var(--white); cursor: pointer; font-weight: 700; }
+.converter-download { border-color: rgba(124,58,237,.5); }
+.checksum-link, .source-link { display: block; margin-top: .8rem; color: var(--accent2); font-size: .88rem; font-weight: 700; }
+.checksum-link:hover, .source-link:hover { color: var(--white); }
+.source-link { color: var(--muted); font-weight: 500; }
+@media (max-width: 760px) {
+  .compatibility-grid, .package-grid, .split-panel, .comparison-grid { grid-template-columns: 1fr; }
+  .split-panel { gap: 2rem; }
+}

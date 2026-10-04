@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Give an existing pure Arch Linux KDE Plasma installation the MYLASTARCH desktop, applications, and quality-of-life configuration." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DCCWEBSITE" />
+  <meta property="og:title" content="MYLASTARCH KDE Converter" />
+  <meta property="og:description" content="Bring the MYLASTARCH KDE experience to an existing pure Arch Linux installation." />
+  <meta property="og:url" content="https://www.dccwebsite.com/mylastarch-converter" />
+  <meta property="og:image" content="https://www.dccwebsite.com/images/mylastarch.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>MYLASTARCH KDE Converter</title>
+  <link rel="canonical" href="https://www.dccwebsite.com/mylastarch-converter" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/mylastarch.css" />
+  <link rel="stylesheet" href="css/mylastarch-converter.css" />
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="mylastarch.html"><span>MY</span>LASTARCH</a>
+  <div class="nav-links">
+    <a href="#compatibility">Compatibility</a>
+    <a href="#changes">What It Changes</a>
+    <a href="#packages">Packages</a>
+    <a href="#how-it-works">How It Works</a>
+    <a href="mylastarch.html">Full ISO</a>
+    <a href="#download" class="nav-cta">Get the Converter</a>
+  </div>
+</nav>
+
+<header class="hero converter-hero">
+  <div class="hero-eyebrow">Beta · Existing pure Arch Linux installations</div>
+  <h1>KEEP ARCH.<br /><span class="accent">ADD MYLASTARCH.</span></h1>
+  <p class="hero-sub">Bring the MYLASTARCH Plasma layout, Cairo-Dock, visual identity, applications, and desktop defaults to a KDE system you already installed.</p>
+  <div class="hero-buttons">
+    <a href="#download" class="btn btn-primary">Get the Converter</a>
+    <a href="#compatibility" class="btn btn-secondary">Check Compatibility</a>
+  </div>
+  <div class="hero-terminal" aria-label="Example converter command">
+    <div><span class="prompt">$</span> <span class="cmd">sudo ./convert-to-mylastarch.sh</span></div>
+    <div class="terminal-detail">[1/8] Checking this Arch KDE system</div>
+    <div class="terminal-detail">[2/8] Creating a recovery backup</div>
+    <div class="terminal-detail">[3/8] Showing installation choices…</div>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="stat"><div class="stat-num">Arch</div><div class="stat-label">Pure Arch only</div></div>
+  <div class="stat"><div class="stat-num">KDE</div><div class="stat-label">Plasma desktop</div></div>
+  <div class="stat"><div class="stat-num">Menu</div><div class="stat-label">Guided choices</div></div>
+  <div class="stat"><div class="stat-num">Backup</div><div class="stat-label">Before changes</div></div>
+</div>
+
+<main>
+  <section id="compatibility" class="compatibility-section">
+    <div class="container">
+      <div class="section-eyebrow">Read This First</div>
+      <h2 class="section-title">Made for pure Arch Linux with KDE Plasma</h2>
+      <p class="section-desc">The converter expects Arch Linux repositories, package names, and Plasma configuration. It checks the system before making changes.</p>
+      <div class="compatibility-grid">
+        <article class="compatibility-card supported">
+          <h3>✓ Supported</h3>
+          <ul>
+            <li>Pure Arch Linux installed manually or with archinstall</li>
+            <li>An existing KDE Plasma desktop, or a minimal Arch system being prepared for Plasma</li>
+            <li>x86_64 computers using official Arch repositories</li>
+          </ul>
+        </article>
+        <article class="compatibility-card unsupported">
+          <h3>Not supported yet</h3>
+          <ul>
+            <li>Manjaro, EndeavourOS, Garuda, CachyOS, or other Arch-based distributions</li>
+            <li>Debian, Ubuntu, Fedora, openSUSE, or non-Arch systems</li>
+            <li>Non-KDE desktop conversions</li>
+          </ul>
+        </article>
+      </div>
+      <p class="beta-note"><strong>Beta software:</strong> Back up important personal files first. The converter makes its own configuration backup, but that is not a replacement for a full system backup.</p>
+    </div>
+  </section>
+
+  <section id="changes">
+    <div class="container">
+      <div class="features-header">
+        <div class="section-eyebrow">The MYLASTARCH Experience</div>
+        <h2 class="section-title">The familiar desktop, without reinstalling Arch</h2>
+        <p class="section-desc">The script installs the pieces and applies the same reusable configuration used by MYLASTARCH.</p>
+      </div>
+      <div class="features-grid">
+        <article class="feature-card"><div class="feature-icon">🖥️</div><h3>Plasma layout</h3><p>Adds the MYLASTARCH top panel, application menu, desktop defaults, splash screen, wallpaper, icons, and cursors.</p></article>
+        <article class="feature-card"><div class="feature-icon">🚀</div><h3>Cairo-Dock</h3><p>Installs and configures Cairo-Dock, starts it with the desktop, and disables competing Plank autostart entries.</p></article>
+        <article class="feature-card"><div class="feature-icon">📁</div><h3>Dolphin refinements</h3><p>Applies practical file-manager defaults, including the full-width status bar and network-share support.</p></article>
+        <article class="feature-card"><div class="feature-icon">🔄</div><h3>Arch Update</h3><p>Adds a visible update tool for routine Arch maintenance, supplied as a signed package through the MYLASTARCH repository.</p></article>
+        <article class="feature-card"><div class="feature-icon">🌌</div><h3>XScreenSaver</h3><p>Installs XScreenSaver, its menu entry and autostart configuration, together with the MYLASTARCH image folder.</p></article>
+        <article class="feature-card"><div class="feature-icon">🔊</div><h3>Desktop essentials</h3><p>Adds the selected audio, Bluetooth, printing, mDNS, SMB, theme, browser, mail, and multimedia components while preserving a recognized existing office suite.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="preserve-section">
+    <div class="container split-panel">
+      <div>
+        <div class="section-eyebrow">Designed to coexist</div>
+        <h2 class="section-title">What the converter preserves</h2>
+        <p>Your account and personal files remain in place. The converter does not rename the operating system, create a demonstration account, or replace your bootloader theme.</p>
+      </div>
+      <ul class="check-list">
+        <li>Your existing user accounts and home folders</li>
+        <li>Your current bootloader and boot configuration</li>
+        <li>Your current display manager by default</li>
+        <li>Existing Dolphin preferences outside the settings it manages</li>
+        <li>Backups under <code>/var/backups/mylastarch-converter/</code></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="packages">
+    <div class="container">
+      <div class="features-header">
+        <div class="section-eyebrow">No Hidden Package List</div>
+        <h2 class="section-title">You see what will be installed</h2>
+        <p class="section-desc">Before installation, the menu explains each source and prints the package choices in color so you can review them.</p>
+      </div>
+      <div class="package-grid">
+        <article class="package-card"><div class="package-source">Official Arch repositories</div><h3>Plasma and desktop foundation</h3><p>Plasma, Dolphin, Konsole, Kate, Cairo-Dock, Papirus, PipeWire, Bluetooth, printing, SMB, Thunderbird, Vivaldi, Strawberry, Variety, XScreenSaver, and supporting packages. LibreOffice Fresh is added only when a recognized office suite is not already installed.</p></article>
+        <article class="package-card"><div class="package-source repo-source">Signed MYLASTARCH repository</div><h3>Project packages</h3><p>Used to install packages such as Arch Update and Sublime Text. The recommended menu choice removes the MYLASTARCH repository from pacman after installation.</p></article>
+        <article class="package-card"><div class="package-source aur-source">Optional Yay support</div><h3>Your choice</h3><p>You can install <code>yay-bin</code> for AUR-aware updates and fallback package access, or decline it. The menu explains what will be unavailable before you decide.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="desktop-preview" aria-labelledby="preview-title">
+    <div class="container">
+      <div class="features-header">
+        <div class="section-eyebrow">Desktop Preview</div>
+        <h2 class="section-title" id="preview-title">A consistent MYLASTARCH workspace</h2>
+      </div>
+      <div class="comparison-grid">
+        <article class="comparison-card">
+          <div class="comparison-label">Before</div>
+          <a href="images/Screenshots/mylastarch-converter-before.webp" aria-label="Open the full clean Arch KDE Plasma desktop screenshot">
+            <img src="images/Screenshots/mylastarch-converter-before.webp" alt="Clean Arch Linux KDE Plasma desktop showing the default Breeze theme, bottom panel, application launcher, Dolphin, Konsole, and System Settings" loading="lazy" />
+          </a>
+          <p>A representative clean Plasma installation. Your starting desktop may look different if you have already customized it.</p>
+        </article>
+        <article class="comparison-card">
+          <div class="comparison-label after-label">After</div>
+          <a href="images/Screenshots/mylastarch-converter-after.webp" aria-label="Open the full MYLASTARCH converted desktop screenshot">
+            <img src="images/Screenshots/mylastarch-converter-after.webp" alt="Converted MYLASTARCH desktop showing its top panel, application menu, Cairo-Dock, Dolphin, Variety, and XScreenSaver settings" loading="lazy" />
+          </a>
+          <p>The same kind of Arch KDE installation after conversion, with the MYLASTARCH layout, styling, tools, and applications.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works">
+    <div class="container">
+      <div class="features-header">
+        <div class="section-eyebrow">Guided Conversion</div>
+        <h2 class="section-title">Review, choose, convert, validate</h2>
+      </div>
+      <ol class="steps">
+        <li><span>1</span><div><h3>Update and back up Arch</h3><p>Start with a current pure Arch installation and protect any irreplaceable personal files.</p></div></li>
+        <li><span>2</span><div><h3>Download and extract</h3><p>Keep the converter folder intact so the script can find all reusable MYLASTARCH assets.</p></div></li>
+        <li><span>3</span><div><h3>Run the guided menu</h3><p>Choose the target user, display-manager behavior, temporary repository option, and optional Yay support.</p></div></li>
+        <li><span>4</span><div><h3>Reboot and validate</h3><p>Log out or reboot to load the Plasma layout and autostart applications, then run the included validator if anything looks wrong.</p></div></li>
+      </ol>
+      <div class="install-instructions">
+        <div class="section-eyebrow">Terminal Instructions</div>
+        <h3>Extract and start the converter</h3>
+        <p>Open a terminal in the folder containing the downloaded archive, then run:</p>
+        <pre><code>tar -xzf MyLastArch-KDE-Converter.tar.gz
+cd MyLastArch-KDE-Converter
+sudo ./tools/convert-to-mylastarch/convert-to-mylastarch.sh</code></pre>
+        <p>The script opens its numbered menu and asks which existing desktop user to configure. Do not move the script out of the extracted folder; it needs the included configuration and artwork files.</p>
+        <details>
+          <summary>Optional: verify the downloaded archive first</summary>
+          <pre><code>sha256sum -c MyLastArch-KDE-Converter.tar.gz.sha256</code></pre>
+          <p>A successful check reports <code>MyLastArch-KDE-Converter.tar.gz: OK</code>.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="download">
+    <div class="container">
+      <div class="download-box converter-download">
+        <div class="download-text">
+          <div class="download-platform">MYLASTARCH KDE Converter · Beta</div>
+          <h2>Download the KDE Converter</h2>
+          <p>Download the complete converter archive, verify its checksum, extract it, and start the guided menu from a terminal.</p>
+          <div class="download-meta">
+            Format: <span>tar.gz</span> &nbsp;·&nbsp;
+            Size: <span>23.38 MiB</span> &nbsp;·&nbsp;
+            Status: <span>Beta</span>
+          </div>
+        </div>
+        <div class="download-action">
+          <a href="https://filedn.com/llKia39vCGhFEIFcfUifr6S/MyLastArch-KDE-Converter.tar.gz" class="btn btn-primary download-button">⬇ Download Converter</a>
+          <a href="https://filedn.com/llKia39vCGhFEIFcfUifr6S/MyLastArch-KDE-Converter.tar.gz.sha256" class="checksum-link">Download SHA256 file</a>
+          <div class="download-checksum">SHA256: fe49e6a5e635f87377b08a6593c90a4ce485b05157d4b089abd14a296099f8a7</div>
+          <a href="https://github.com/mylastarch/mylastarch-1.0/tree/main/tools/convert-to-mylastarch" class="source-link">Review the source on GitHub →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo"><span>MY</span>LASTARCH</div>
+    <p class="footer-tagline">The MYLASTARCH KDE experience for an existing pure Arch Linux system</p>
+    <div class="footer-links">
+      <a href="index.html">DCCWEBSITE Home</a>
+      <a href="mylastarch.html">MYLASTARCH ISO</a>
+      <a href="#compatibility">Compatibility</a>
+      <a href="#packages">Packages</a>
+      <a href="https://github.com/mylastarch/mylastarch-1.0/discussions/1">Discussions</a>
+      <a href="https://github.com/mylastarch">GitHub</a>
+    </div>
+    <p class="footer-copy">&copy; Copyright 2014&ndash;<span id="copyright-year">2026</span>, MYLASTARCH · Free and open-source software</p>
+  </div>
+</footer>
+<script>document.getElementById('copyright-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
