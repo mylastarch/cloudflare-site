@@ -114,6 +114,7 @@
         <li>Your current bootloader and boot configuration</li>
         <li>Your current display manager by default</li>
         <li>Existing Dolphin preferences outside the settings it manages</li>
+        <li>An existing Vivaldi profile unless you opt in to two MYLASTARCH defaults</li>
         <li>Backups under <code>/var/backups/mylastarch-converter/</code></li>
       </ul>
     </div>
@@ -171,6 +172,7 @@
         <li><span>3</span><div><h3>Run the guided menu</h3><p>Choose the target user, display-manager behavior, temporary repository option, and optional Yay support.</p></div></li>
         <li><span>4</span><div><h3>Reboot and validate</h3><p>Log out or reboot to load the Plasma layout and autostart applications, then run the included validator if anything looks wrong.</p></div></li>
       </ol>
+      <div class="beta-note application-note"><strong>Two application notes:</strong> Strawberry asks you to select <strong>Subsonic</strong> at the bottom of its left sidebar and refresh the catalog before first playback. For Vivaldi, the converter preserves an existing profile by default; an optional menu choice changes only the new-tab page and default search while keeping bookmarks, passwords, extensions, history, and tabs.</div>
       <div class="install-instructions">
         <div class="section-eyebrow">Terminal Instructions</div>
         <h3>Extract and start the converter</h3>
@@ -197,14 +199,14 @@ sudo ./tools/convert-to-mylastarch/convert-to-mylastarch.sh</code></pre>
           <p>Download the complete converter archive, verify its checksum, extract it, and start the guided menu from a terminal.</p>
           <div class="download-meta">
             Format: <span>tar.gz</span> &nbsp;·&nbsp;
-            Size: <span>23.38 MiB</span> &nbsp;·&nbsp;
+            Size: <span>23.34 MiB</span> &nbsp;·&nbsp;
             Status: <span>Beta</span>
           </div>
         </div>
         <div class="download-action">
           <a href="https://filedn.com/llKia39vCGhFEIFcfUifr6S/MyLastArch-KDE-Converter.tar.gz" class="btn btn-primary download-button">⬇ Download Converter</a>
           <a href="https://filedn.com/llKia39vCGhFEIFcfUifr6S/MyLastArch-KDE-Converter.tar.gz.sha256" class="checksum-link">Download SHA256 file</a>
-          <div class="download-checksum">SHA256: fe49e6a5e635f87377b08a6593c90a4ce485b05157d4b089abd14a296099f8a7</div>
+          <div class="download-checksum">SHA256: de513cc8af23112b1b008dd5455aaa6d97c1499c49ffd7d21c2a060f8b3eda81</div>
           <a href="https://github.com/mylastarch/mylastarch-1.0/tree/main/tools/convert-to-mylastarch" class="source-link">Review the source on GitHub →</a>
         </div>
       </div>
