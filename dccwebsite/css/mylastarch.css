@@ -357,6 +357,14 @@
     }
     .download-meta span { color: var(--accent2); }
     .download-button { font-size: 1.05rem; padding: 1rem 2.5rem; }
+    .checksum-link {
+      display: block;
+      margin-top: 0.8rem;
+      color: var(--accent2);
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+    .checksum-link:hover { color: var(--white); }
     .download-checksum {
       font-size: 0.8rem;
       color: var(--muted);
